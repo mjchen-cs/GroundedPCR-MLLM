@@ -3,7 +3,7 @@ message: "If you use this software, please cite the article below."
 title: "GroundedPCR-MLLM: physics-grounded multimodal LLM evaluation for pretreatment pCR prediction from breast DCE-MRI"
 type: software
 license: MIT
-repository-code: "https://github.com/<org>/GroundedPCR-MLLM"
+repository-code: "https://github.com/mjchen-cs/GroundedPCR-MLLM"
 authors:
   - family-names: Xiao
     given-names: Wenjing
