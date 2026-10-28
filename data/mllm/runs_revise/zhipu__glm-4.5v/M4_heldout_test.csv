@@ -1,0 +1,439 @@
+pid,split,config,violations,orig_probability,orig_conclusion,orig_evidence,orig_report,parse_ok,probability,conclusion,evidence,report,raw_text,prompt_tokens,completion_tokens,latency_s,cached
+ACRIN-6698-208650,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.434 (log-odds), i.e. \""against_pcr\"".""]",0.6,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.401, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a moderate probability of achieving pCR (estimated ~60%). This is primarily driven by HER2-positivity, which is a strong predictor of favorable neoadjuvant response. Additionally, the high core15_kep value indicates rapid contrast washout in the tumor core, a feature associated with pCR. The low-risk MammaPrint status further supports this likelihood. However, HR-positivity acts as a slight counter-indicator. The MRI shows a mass with heterogeneous enhancement and relatively rapid washout kinetics consistent with these quantitative findings.",1,0.6,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.401, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a moderate probability of achieving pCR (estimated ~60%). This is primarily driven by HER2-positivity, which is a strong predictor of favorable neoadjuvant response. Additionally, the high core15_kep value indicates rapid contrast washout in the tumor core, a feature associated with pCR. The low-risk MammaPrint status and HR-positivity act as counter-indicators in this model. The MRI shows a mass with heterogeneous enhancement and relatively rapid washout kinetics consistent with these quantitative findings.","```json
+{
+  ""pcr_probability"": 0.60,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.401, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient has a moderate probability of achieving pCR (estimated ~60%). This is primarily driven by HER2-positivity, which is a strong predictor of favorable neoadjuvant response. Additionally, the high core15_kep value indicates rapid contrast washout in the tumor core, a feature associated with pCR. The low-risk MammaPrint status and HR-positivity act as counter-indicators in this model. The MRI shows a mass with heterogeneous enhancement and relatively rapid washout kinetics consistent with these quantitative findings.""
+}
+```",2345,258,4.76,1
+ACRIN-6698-383456,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.512 (log-odds), i.e. \""against_pcr\"".""]",0.234,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.251, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2804, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 23%. This assessment is primarily driven by the patient's HR-positive/HER2-negative status and the tumor's kinetic profile (low core15_kep), which are factors typically associated with a lower likelihood of achieving pCR compared to HER2-positive or triple-negative subtypes. While the small tumor volume of 2804 mm3 and the lower-risk MammaPrint category are favorable indicators, they are not sufficient to overcome the negative predictive weight of the biological subtype in this model.",1,0.234,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.251, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2804, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 23%. This assessment is primarily driven by the patient's HR-positive/HER2-negative status and the tumor's kinetic profile (low core15_kep), which are factors typically associated with a lower likelihood of achieving pCR compared to HER2-positive or triple-negative subtypes. While the small tumor volume of 2804 mm3 and the lower-risk MammaPrint category are favorable indicators, they are not sufficient to overcome the negative predictive weight of the biological subtype in this model.","```json
+{
+  ""pcr_probability"": 0.234,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.251, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 2804, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The estimated probability of pathologic complete response (pCR) is low at approximately 23%. This assessment is primarily driven by the patient's HR-positive/HER2-negative status and the tumor's kinetic profile (low core15_kep), which are factors typically associated with a lower likelihood of achieving pCR compared to HER2-positive or triple-negative subtypes. While the small tumor volume of 2804 mm3 and the lower-risk MammaPrint category are favorable indicators, they are not sufficient to overcome the negative predictive weight of the biological subtype in this model.""
+}
+```",2372,292,5.9,1
+ACRIN-6698-430441,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.422 (log-odds), i.e. \""against_pcr\"".""]",0.23,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 35705, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is young (age 30) with a large tumor volume (35705 mm3). While the MammaPrint low-risk status (0) favors a response, the HR-positive/HER2-negative subtype and the substantial tumor burden are strong negative predictors for pathologic complete response (pCR) in this context. The MRI shows a large area of heterogeneous enhancement consistent with the measured volume. Based on these pretreatment features, the estimated probability of achieving pCR after neoadjuvant therapy is low (~23%).",1,0.23,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 35705, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is young (age 30) with a large tumor volume (35705 mm3). The MammaPrint low-risk status (0), HR-positive/HER2-negative subtype, and substantial tumor burden are negative predictors for pathologic complete response (pCR) in this context. The MRI shows a large area of heterogeneous enhancement consistent with the measured volume. Based on these pretreatment features, the estimated probability of achieving pCR after neoadjuvant therapy is low (~23%).","```json
+{
+  ""pcr_probability"": 0.23,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 35705, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is young (age 30) with a large tumor volume (35705 mm3). The MammaPrint low-risk status (0), HR-positive/HER2-negative subtype, and substantial tumor burden are negative predictors for pathologic complete response (pCR) in this context. The MRI shows a large area of heterogeneous enhancement consistent with the measured volume. Based on these pretreatment features, the estimated probability of achieving pCR after neoadjuvant therapy is low (~23%).""
+}
+```",2342,254,6.92,1
+ACRIN-6698-413211,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.367 (log-odds), i.e. \""against_pcr\"".""]",0.287,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 66, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 35171, ""direction"": ""against_pcr""}]","The probability of pathologic complete response (pCR) is estimated at approximately 29%. This estimate reflects a balance between favorable factors—specifically HER2-positivity and a lower-risk MammaPrint category—and unfavorable characteristics including older age, hormone receptor positivity, and a large tumor volume of over 35,000 mm³. The imaging shows a large, heterogeneously enhancing mass with irregular margins.",1,0.287,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 66, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 35171, ""direction"": ""against_pcr""}]","The probability of pathologic complete response (pCR) is estimated at approximately 29%. This estimate reflects a balance between favorable factors—specifically HER2-positivity—and unfavorable characteristics including older age, hormone receptor positivity, a lower-risk MammaPrint category, and a large tumor volume of over 35,000 mm³. The imaging shows a large, heterogeneously enhancing mass with irregular margins.","```json
+{
+  ""pcr_probability"": 0.287,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""age"", ""value"": 66, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 35171, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The probability of pathologic complete response (pCR) is estimated at approximately 29%. This estimate reflects a balance between favorable factors—specifically HER2-positivity—and unfavorable characteristics including older age, hormone receptor positivity, a lower-risk MammaPrint category, and a large tumor volume of over 35,000 mm³. The imaging shows a large, heterogeneously enhancing mass with irregular margins.""
+}
+```",2315,237,9.39,1
+ACRIN-6698-580541,heldout_test,M4,"[""Evidence item \""core15_Ktrans\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.146 (log-odds), i.e. \""against_pcr\"".""]",0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0889, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive (HR+), HER2-negative disease with a low-risk MammaPrint category, all of which are established factors associated with lower pCR rates following neoadjuvant therapy. While the quantitative MRI analysis indicates relatively low vascular permeability (Ktrans), which can sometimes favor response, the unfavorable clinical and genomic markers dominate the prognosis in this case.",1,0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0889, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive (HR+), HER2-negative disease with a low-risk MammaPrint category, all of which are established factors associated with lower pCR rates following neoadjuvant therapy. While the quantitative MRI analysis indicates relatively low vascular permeability (Ktrans), the unfavorable clinical and genomic markers dominate the prognosis in this case.","```json
+{
+  ""pcr_probability"": 0.22,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0889, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive (HR+), HER2-negative disease with a low-risk MammaPrint category, all of which are established factors associated with lower pCR rates following neoadjuvant therapy. While the quantitative MRI analysis indicates relatively low vascular permeability (Ktrans), the unfavorable clinical and genomic markers dominate the prognosis in this case.""
+}
+```",2341,254,46.83,1
+ACRIN-6698-597907,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.514 (log-odds), i.e. \""against_pcr\"".""]",0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0824, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5662, ""direction"": ""supports_pcr""}]","The patient is a 52-year-old with HR-positive/HER2-negative breast cancer and a low-risk MammaPrint result (category 0). While the favorable genomic risk profile supports the possibility of a pathologic complete response (pCR), the hormone receptor positivity and HER2-negativity are strong negative predictors in this context. Quantitative MRI analysis reveals a tumor with relatively low vascular permeability (core15_Ktrans of 0.0824), which is associated with a lower likelihood of pCR. The moderate tumor volume of 5662 mm3 provides a slight positive contribution. Overall, integrating these clinical, genomic, and imaging features, the estimated probability of achieving pCR after neoadjuvant therapy is approximately 22%.",1,0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0824, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5662, ""direction"": ""supports_pcr""}]","The patient is a 52-year-old with HR-positive/HER2-negative breast cancer and a low-risk MammaPrint result (category 0). While the favorable genomic risk profile supports the possibility of a pathologic complete response (pCR), the hormone receptor positivity and HER2-negativity are strong negative predictors in this context. Quantitative MRI analysis reveals a tumor with relatively low vascular permeability (core15_Ktrans of 0.0824), which is associated with a lower likelihood of pCR. The moderate tumor volume of 5662 mm3 provides a slight positive contribution. Overall, integrating these clinical, genomic, and imaging features, the estimated probability of achieving pCR after neoadjuvant therapy is approximately 22%.","```json
+{
+  ""pcr_probability"": 0.22,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0824, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 5662, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""The patient is a 52-year-old with HR-positive/HER2-negative breast cancer and a low-risk MammaPrint result (category 0). While the favorable genomic risk profile supports the possibility of a pathologic complete response (pCR), the hormone receptor positivity and HER2-negativity are strong negative predictors in this context. Quantitative MRI analysis reveals a tumor with relatively low vascular permeability (core15_Ktrans of 0.0824), which is associated with a lower likelihood of pCR. The moderate tumor volume of 5662 mm3 provides a slight positive contribution. Overall, integrating these clinical, genomic, and imaging features, the estimated probability of achieving pCR after neoadjuvant therapy is approximately 22%.""
+}
+```",2399,314,36.38,1
+ACRIN-6698-607843,heldout_test,M4,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.206,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0703, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is predicted to have a low probability (approximately 20%) of achieving a pathologic complete response to neoadjuvant therapy. This estimate is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive, HER2-negative disease with a lower-risk MammaPrint category. These clinical factors are typically associated with lower rates of complete pathological resolution compared to triple-negative or HER2-positive subtypes. While the quantitative MRI parameters show moderate enhancement kinetics, they do not sufficiently offset the unfavorable prognostic weight of the receptor status in this predictive model.",1,0.206,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0703, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is predicted to have a low probability of achieving a pathologic complete response to neoadjuvant therapy. This estimate is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive, HER2-negative disease with a lower-risk MammaPrint category. These clinical factors are typically associated with lower rates of complete pathological resolution compared to triple-negative or HER2-positive subtypes. While the quantitative MRI parameters show moderate enhancement kinetics, they do not sufficiently offset the unfavorable prognostic weight of the receptor status in this predictive model.","```json
+{
+  ""pcr_probability"": 0.206,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0703, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is predicted to have a low probability of achieving a pathologic complete response to neoadjuvant therapy. This estimate is primarily driven by the tumor's biological profile: the patient has hormone receptor-positive, HER2-negative disease with a lower-risk MammaPrint category. These clinical factors are typically associated with lower rates of complete pathological resolution compared to triple-negative or HER2-positive subtypes. While the quantitative MRI parameters show moderate enhancement kinetics, they do not sufficiently offset the unfavorable prognostic weight of the receptor status in this predictive model.""
+}
+```",2346,263,5.8,1
+ACRIN-6698-689076,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.503 (log-odds), i.e. \""against_pcr\"".""]",0.25,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16366, ""direction"": ""neutral""}]","The patient is a young woman (age 32) with a hormone receptor-positive, HER2-negative tumor and a low-risk MammaPrint result. While the favorable genomic profile supports the possibility of pCR, the HR-positive/HER2-negative subtype is historically associated with lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. The tumor volume is moderate at 16,366 mm³. Based on these pretreatment characteristics, the estimated probability of achieving pathologic complete response is approximately 25%.",1,0.25,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16366, ""direction"": ""neutral""}]","The patient is a young woman (age 32) with a hormone receptor-positive, HER2-negative tumor and a low-risk MammaPrint result. While the favorable genomic profile supports the possibility of pCR, the HR-positive/HER2-negative subtype is historically associated with lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. The tumor volume is moderate at 16,366 mm³. Based on these pretreatment characteristics, the estimated probability of achieving pathologic complete response is approximately 25%.","```json
+{
+  ""pcr_probability"": 0.25,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 16366, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a young woman (age 32) with a hormone receptor-positive, HER2-negative tumor and a low-risk MammaPrint result. While the favorable genomic profile supports the possibility of pCR, the HR-positive/HER2-negative subtype is historically associated with lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. The tumor volume is moderate at 16,366 mm³. Based on these pretreatment characteristics, the estimated probability of achieving pathologic complete response is approximately 25%.""
+}
+```",2321,243,7.24,1
+ISPY2-151481,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.474 (log-odds), i.e. \""against_pcr\"".""]",0.62,likely_pcr,"[{""feature"": ""core15_kep"", ""value"": 0.515, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5681, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","This patient has a high probability of achieving pCR (estimated ~62%). The prediction is primarily driven by the very high tumor vascular permeability (core15_kep = 0.515), which is a strong positive predictor in this model. Additionally, the triple-negative (HR=0, HER2=0) biology and low-risk MammaPrint status are favorable factors for treatment response. The moderate tumor volume and rapid, intense enhancement seen on MRI further support this likelihood of a complete response to neoadjuvant therapy.",1,0.62,likely_pcr,"[{""feature"": ""core15_kep"", ""value"": 0.515, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5681, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","This patient has a high probability of achieving pCR (estimated ~62%). The prediction is primarily driven by the very high tumor vascular permeability (core15_kep = 0.515), which is a strong positive predictor in this model. Additionally, the triple-negative (HR=0, HER2=0) biology and low-risk MammaPrint status are favorable factors for treatment response. The moderate tumor volume and rapid, intense enhancement seen on MRI further support this likelihood of a complete response to neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.62,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""core15_kep"", ""value"": 0.515, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 5681, ""direction"": ""supports_pcr""},
+    {""feature"": ""safe_rim_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""This patient has a high probability of achieving pCR (estimated ~62%). The prediction is primarily driven by the very high tumor vascular permeability (core15_kep = 0.515), which is a strong positive predictor in this model. Additionally, the triple-negative (HR=0, HER2=0) biology and low-risk MammaPrint status are favorable factors for treatment response. The moderate tumor volume and rapid, intense enhancement seen on MRI further support this likelihood of a complete response to neoadjuvant therapy.""
+}
+```",2383,293,4.54,1
+ACRIN-6698-973837,heldout_test,M4,"[""Evidence item \""core15_kep\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.275 (log-odds), i.e. \""against_pcr\""."", ""Evidence item \""safe_rim_Ktrans\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.196 (log-odds), i.e. \""against_pcr\"".""]",0.165,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.136, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0605, ""direction"": ""supports_pcr""}]","The patient is HR-positive/HER2-negative with a low-risk MammaPrint profile (0), which are clinical factors typically associated with a lower likelihood of achieving pathologic complete response (pCR) compared to HER2-positive or triple-negative subtypes. Quantitative MRI analysis reveals low perfusion parameters in both the tumor core and rim (core15_Ktrans of 0.0728 and safe_rim_Ktrans of 0.0605). While these low values can sometimes indicate favorable biology, the dominant clinical risk factors in this case suggest a probability of pCR of approximately 16.5%.",1,0.165,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.136, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0605, ""direction"": ""against_pcr""}]","The patient is HR-positive/HER2-negative with a low-risk MammaPrint profile (0), which are clinical factors typically associated with a lower likelihood of achieving pathologic complete response (pCR) compared to HER2-positive or triple-negative subtypes. Quantitative MRI analysis reveals low perfusion parameters in both the tumor core and rim (core15_Ktrans of 0.0728 and safe_rim_Ktrans of 0.0605). While these low values can sometimes indicate favorable biology, the dominant clinical risk factors in this case suggest a probability of pCR of approximately 16.5%.","```json
+{
+  ""pcr_probability"": 0.165,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.136, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0605, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is HR-positive/HER2-negative with a low-risk MammaPrint profile (0), which are clinical factors typically associated with a lower likelihood of achieving pathologic complete response (pCR) compared to HER2-positive or triple-negative subtypes. Quantitative MRI analysis reveals low perfusion parameters in both the tumor core and rim (core15_Ktrans of 0.0728 and safe_rim_Ktrans of 0.0605). While these low values can sometimes indicate favorable biology, the dominant clinical risk factors in this case suggest a probability of pCR of approximately 16.5%.""
+}
+```",2413,287,3.5,1
+ISPY2-169536,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.446 (log-odds), i.e. \""against_pcr\"".""]",0.52,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1301, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.142, ""direction"": ""against_pcr""}]","The probability of achieving a pathologic complete response (pCR) is estimated at approximately 52%, placing this patient in an uncertain category. This estimate is primarily driven by the favorable HER2-positive status and low-risk MammaPrint result, which are strong predictors of pCR. Additionally, the small tumor volume is associated with higher response rates. However, these positive factors are partially offset by the hormone receptor-positive status and the relatively low kinetic parameters (core15_kep), which typically suggest lower chemosensitivity in this context.",1,0.52,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1301, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.142, ""direction"": ""against_pcr""}]","The probability of achieving a pathologic complete response (pCR) is estimated at approximately 52%, placing this patient in an uncertain category. This estimate is primarily driven by the favorable HER2-positive status and the small tumor volume, which are strong predictors of pCR. However, these positive factors are partially offset by the hormone receptor-positive status, the low-risk MammaPrint result (which in this model context is associated with lower pCR odds), and the relatively low kinetic parameters (core15_kep), suggesting moderate chemosensitivity.","```json
+{
+  ""pcr_probability"": 0.52,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 1301, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.142, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The probability of achieving a pathologic complete response (pCR) is estimated at approximately 52%, placing this patient in an uncertain category. This estimate is primarily driven by the favorable HER2-positive status and the small tumor volume, which are strong predictors of pCR. However, these positive factors are partially offset by the hormone receptor-positive status, the low-risk MammaPrint result (which in this model context is associated with lower pCR odds), and the relatively low kinetic parameters (core15_kep), suggesting moderate chemosensitivity.""
+}
+```",2344,266,5.49,1
+ISPY2-112606,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.426 (log-odds), i.e. \""against_pcr\"".""]",0.443,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0941, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is approximately 44%. This intermediate risk is driven by competing factors: HER2-positivity and low MammaPrint risk are favorable predictors for pCR, whereas hormone receptor positivity and relatively low tumor perfusion (Ktrans) are associated with a lower likelihood of complete response. The tumor demonstrates heterogeneous enhancement with a central non-enhancing area, consistent with the provided quantitative metrics.",1,0.443,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0941, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is approximately 44%. This intermediate risk is driven by competing factors: HER2-positivity is a favorable predictor for pCR, whereas hormone receptor positivity and the MammaPrint category are associated with a lower likelihood of response. Additionally, relatively low tumor perfusion (Ktrans) values suggest reduced chemosensitivity. The MRI shows a mass with heterogeneous enhancement and a central non-enhancing region.","```json
+{
+  ""pcr_probability"": 0.443,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0941, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The estimated probability of pathologic complete response (pCR) is approximately 44%. This intermediate risk is driven by competing factors: HER2-positivity is a favorable predictor for pCR, whereas hormone receptor positivity and the MammaPrint category are associated with a lower likelihood of response. Additionally, relatively low tumor perfusion (Ktrans) values suggest reduced chemosensitivity. The MRI shows a mass with heterogeneous enhancement and a central non-enhancing region.""
+}
+```",2321,245,5.06,1
+ISPY2-240432,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.398 (log-odds), i.e. \""against_pcr\"".""]",0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 97575, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the very large tumor volume and the hormone receptor-positive, HER2-negative subtype, both of which are established factors associated with lower pCR rates following neoadjuvant therapy. While the MammaPrint low-risk category provides some favorable prognostic information, it is insufficient to overcome the negative impact of the substantial disease burden observed on imaging.",1,0.22,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 97575, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the very large tumor volume and the hormone receptor-positive, HER2-negative subtype, both of which are established factors associated with lower pCR rates following neoadjuvant therapy. The MammaPrint low-risk category also contributes to the lower predicted probability in this model context.","```json
+{
+  ""pcr_probability"": 0.22,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 97575,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""The estimated probability of pathologic complete response (pCR) is low at approximately 22%. This assessment is primarily driven by the very large tumor volume and the hormone receptor-positive, HER2-negative subtype, both of which are established factors associated with lower pCR rates following neoadjuvant therapy. The MammaPrint low-risk category also contributes to the lower predicted probability in this model context.""
+}
+```",2364,263,5.78,1
+ISPY2-380769,heldout_test,M4,"[""Evidence item \""tumor_volume_mm3\"" is marked \""against_pcr\"", but its contribution in the reference model is +0.037 (log-odds), i.e. \""supports_pcr\"".""]",0.7,likely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0915, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 11166, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 40-year-old with triple-negative breast cancer (HR=0, HER2=0) and a high-risk MammaPrint result (1). These clinical factors are strongly associated with a high likelihood of achieving pathologic complete response (pCR). Quantitative MRI analysis shows moderate tumor volume and perfusion parameters that align with this favorable profile. The reference model predicts a pCR probability of approximately 70%. While the tumor size provides some counter-indication, the overall evidence suggests the patient is likely to respond well to neoadjuvant therapy.",1,0.7,likely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0915, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 11166, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 40-year-old with triple-negative breast cancer (HR=0, HER2=0) and a high-risk MammaPrint result (1). These clinical factors are strongly associated with a high likelihood of achieving pathologic complete response (pCR). Quantitative MRI analysis shows moderate tumor volume and perfusion parameters that align with this favorable profile. The reference model predicts a pCR probability of approximately 70%. The overall evidence suggests the patient is likely to respond well to neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.70,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""safe_rim_kep"", ""value"": 0.0915, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 11166, ""direction"": ""supports_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 40-year-old with triple-negative breast cancer (HR=0, HER2=0) and a high-risk MammaPrint result (1). These clinical factors are strongly associated with a high likelihood of achieving pathologic complete response (pCR). Quantitative MRI analysis shows moderate tumor volume and perfusion parameters that align with this favorable profile. The reference model predicts a pCR probability of approximately 70%. The overall evidence suggests the patient is likely to respond well to neoadjuvant therapy.""
+}
+```",2361,262,4.71,1
+ISPY2-519738,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.399 (log-odds), i.e. \""against_pcr\"".""]",0.64,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4851, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient has a high estimated probability (64%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. This favorable prediction is primarily driven by the HER2-positive status and the low-risk MammaPrint category. Additionally, the tumor is hormone receptor-negative and has a relatively small volume of 4851 mm³. The MRI shows a mass with rapid, intense enhancement and well-defined margins, which is consistent with the quantitative perfusion parameters and supports the likelihood of a good response.",1,0.64,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4851, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient has a high estimated probability (64%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. This favorable prediction is primarily driven by the HER2-positive status and the hormone receptor-negative status. Additionally, the tumor has a relatively small volume of 4851 mm³. The MRI shows a mass with rapid, intense enhancement and well-defined margins, which is consistent with the quantitative perfusion parameters and supports the likelihood of a good response.","```json
+{
+  ""pcr_probability"": 0.64,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 4851, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""The patient has a high estimated probability (64%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. This favorable prediction is primarily driven by the HER2-positive status and the hormone receptor-negative status. Additionally, the tumor has a relatively small volume of 4851 mm³. The MRI shows a mass with rapid, intense enhancement and well-defined margins, which is consistent with the quantitative perfusion parameters and supports the likelihood of a good response.""
+}
+```",2337,251,4.66,1
+ISPY2-369040,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.491 (log-odds), i.e. \""against_pcr\"".""]",0.258,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 20463, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 26%. This assessment is primarily driven by the tumor's hormone receptor-positive, HER2-negative biology, which typically shows lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. Additionally, the large pretreatment tumor volume of over 20,000 mm³ is a negative prognostic factor for achieving pCR. While the MammaPrint result indicates a lower genomic risk category which provides some support for potential response, the overall clinical and imaging profile suggests that residual disease is likely to remain after treatment completion.",1,0.258,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 20463, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The estimated probability of pathologic complete response (pCR) is low at approximately 26%. This assessment is primarily driven by the tumor's hormone receptor-positive, HER2-negative biology, which typically shows lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. Additionally, the large pretreatment tumor volume of over 20,000 mm³ is a negative prognostic factor for achieving pCR. While the MammaPrint result indicates a lower genomic risk category which provides some support for potential response, the overall clinical and imaging profile suggests that residual disease is likely to remain after treatment completion.","```json
+{
+  ""pcr_probability"": 0.258,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 20463,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The estimated probability of pathologic complete response (pCR) is low at approximately 26%. This assessment is primarily driven by the tumor's hormone receptor-positive, HER2-negative biology, which typically shows lower rates of complete response to neoadjuvant therapy compared to HER2-positive or triple-negative subtypes. Additionally, the large pretreatment tumor volume of over 20,000 mm³ is a negative prognostic factor for achieving pCR. While the MammaPrint result indicates a lower genomic risk category which provides some support for potential response, the overall clinical and imaging profile suggests that residual disease is likely to remain after treatment completion.""
+}
+```",2390,310,4.13,1
+ISPY2-568331,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.445 (log-odds), i.e. \""against_pcr\"".""]",0.397,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13501, ""direction"": ""against_pcr""}]","This patient has triple-negative breast cancer with a low-risk MammaPrint category and a tumor volume of approximately 13,500 mm³. The imaging shows a mass with heterogeneous enhancement and a relatively high core Ktrans of 0.145/min. While the negative hormone receptor status and low genomic risk are favorable predictors for pathologic complete response (pCR), the absence of HER2 overexpression and the moderate tumor size are limiting factors. Based on these pretreatment characteristics, the estimated probability of achieving pCR is approximately 40%.",1,0.397,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13501, ""direction"": ""against_pcr""}]","This patient has triple-negative breast cancer with a low-risk MammaPrint category and a tumor volume of approximately 13,500 mm³. The imaging shows a mass with heterogeneous enhancement and a relatively high core Ktrans of 0.145/min. While the negative hormone receptor status is a favorable predictor for pathologic complete response (pCR), the absence of HER2 overexpression and the moderate tumor size are limiting factors. Based on these pretreatment characteristics, the estimated probability of achieving pCR is approximately 40%.","```json
+{
+  ""pcr_probability"": 0.397,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.145, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 13501, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This patient has triple-negative breast cancer with a low-risk MammaPrint category and a tumor volume of approximately 13,500 mm³. The imaging shows a mass with heterogeneous enhancement and a relatively high core Ktrans of 0.145/min. While the negative hormone receptor status is a favorable predictor for pathologic complete response (pCR), the absence of HER2 overexpression and the moderate tumor size are limiting factors. Based on these pretreatment characteristics, the estimated probability of achieving pCR is approximately 40%.""
+}
+```",2352,264,3.93,1
+ISPY2-564234,heldout_test,M4,"[""The report contains number(s) that do not appear in the information provided: 50%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.471,uncertain,"[{""feature"": ""tumor_volume_mm3"", ""value"": 107999, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.398, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}]","This patient has a triple-negative tumor with high-risk MammaPrint status and high core permeability (core15_kep = 0.398), which are favorable predictors for pCR. However, the extremely large tumor volume of 107999 mm3 is a strong negative prognostic factor that significantly lowers the probability of achieving pCR. The competing effects of these features result in an uncertain overall prediction with a probability near 50%.",1,0.471,uncertain,"[{""feature"": ""tumor_volume_mm3"", ""value"": 107999, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.398, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}]","This patient has a triple-negative tumor with high-risk MammaPrint status and high core permeability (core15_kep = 0.398), which are favorable predictors for pCR. However, the extremely large tumor volume of 107999 mm3 is a strong negative prognostic factor that significantly lowers the probability of achieving pCR. The competing effects of these features result in an uncertain overall prediction with a probability near the predicted value of 0.471.","```json
+{
+  ""pcr_probability"": 0.471,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""tumor_volume_mm3"", ""value"": 107999, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.398, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""This patient has a triple-negative tumor with high-risk MammaPrint status and high core permeability (core15_kep = 0.398), which are favorable predictors for pCR. However, the extremely large tumor volume of 107999 mm3 is a strong negative prognostic factor that significantly lowers the probability of achieving pCR. The competing effects of these features result in an uncertain overall prediction with a probability near the predicted value of 0.471.""
+}
+```",2319,234,2.99,1
+ISPY2-613961,heldout_test,M4,"[""Evidence item \""core15_kep\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.208 (log-odds), i.e. \""against_pcr\"".""]",0.58,likely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.206, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 8053, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability (approx. 58%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The prediction is primarily driven by favorable clinical and genomic factors: the tumor is triple-negative (HR-/HER2-) with a high-risk MammaPrint category, which are both associated with higher pCR rates in this context. Additionally, the relatively low core efflux rate (kep) and moderate tumor volume further support this likelihood. While the absence of HER2-positivity is a minor negative factor, the overall profile suggests a better-than-average chance of a complete response.",1,0.58,likely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 8053, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.206, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability (approx. 58%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The prediction is primarily driven by favorable clinical and genomic factors: the tumor is triple-negative (HR-/HER2-) with a high-risk MammaPrint category, which are both associated with higher pCR rates in this context. Additionally, the moderate tumor volume supports this likelihood. However, the core efflux rate and HER2 status act as minor negative factors in the model.","```json
+{
+  ""pcr_probability"": 0.58,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 8053, ""direction"": ""supports_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.206, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This patient has a moderate probability (approx. 58%) of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The prediction is primarily driven by favorable clinical and genomic factors: the tumor is triple-negative (HR-/HER2-) with a high-risk MammaPrint category, which are both associated with higher pCR rates in this context. Additionally, the moderate tumor volume supports this likelihood. However, the core efflux rate and HER2 status act as minor negative factors in the model.""
+}
+```",2387,283,5.95,1
+ISPY2-635862,heldout_test,M4,"[""Evidence item \""core15_kep\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.144 (log-odds), i.e. \""against_pcr\"".""]",0.57,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.214, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This 37-year-old patient has triple-negative breast cancer with a high-risk MammaPrint result and a large tumor volume of over 21,000 mm³. The MRI shows rapid, heterogeneous enhancement with central necrosis. While the triple-negative status and high genomic risk are favorable predictors for pCR in this context, the large tumor size and absence of HER2 amplification introduce significant uncertainty. The quantitative kinetic parameters show moderate permeability. Overall, the estimated probability of achieving pCR is approximately 57%, placing this case in an intermediate risk category where the outcome is difficult to predict with high confidence.",1,0.57,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.214, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This 37-year-old patient has triple-negative breast cancer with a high-risk MammaPrint result and a large tumor volume of over 21,000 mm³. The MRI shows rapid, heterogeneous enhancement with central necrosis. While the triple-negative status and high genomic risk are favorable predictors for pCR in this context, the large tumor size and absence of HER2 amplification introduce significant uncertainty. The quantitative kinetic parameters show moderate permeability. Overall, the estimated probability of achieving pCR is approximately 57%, placing this case in an intermediate risk category where the outcome is difficult to predict with high confidence.","```json
+{
+  ""pcr_probability"": 0.57,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.214, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This 37-year-old patient has triple-negative breast cancer with a high-risk MammaPrint result and a large tumor volume of over 21,000 mm³. The MRI shows rapid, heterogeneous enhancement with central necrosis. While the triple-negative status and high genomic risk are favorable predictors for pCR in this context, the large tumor size and absence of HER2 amplification introduce significant uncertainty. The quantitative kinetic parameters show moderate permeability. Overall, the estimated probability of achieving pCR is approximately 57%, placing this case in an intermediate risk category where the outcome is difficult to predict with high confidence.""
+}
+```",2359,271,5.5,1
+ISPY2-831702,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.426 (log-odds), i.e. \""against_pcr\"".""]",0.62,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1230, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient has a high probability of achieving pCR (estimated ~62%). This is primarily driven by HER2-positivity and a small tumor volume (1230 mm3), both strong predictors of favorable response to neoadjuvant therapy. Additionally, the low-risk MammaPrint status supports this outcome. While HR-positivity slightly lowers the probability compared to pure HER2-positive cases, the overall clinical and imaging profile—including rapid, intense enhancement on MRI—is highly suggestive of a complete pathologic response.",1,0.62,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1230, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient has a high probability of achieving pCR (estimated ~62%). This is primarily driven by HER2-positivity and a small tumor volume (1230 mm3), both strong predictors of favorable response to neoadjuvant therapy. While the low-risk MammaPrint status and HR-positivity are factors that typically lower the likelihood of pCR, the overall clinical and imaging profile—including rapid, intense enhancement on MRI—is highly suggestive of a complete pathologic response.","```json
+{
+  ""pcr_probability"": 0.62,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 1230, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""The patient has a high probability of achieving pCR (estimated ~62%). This is primarily driven by HER2-positivity and a small tumor volume (1230 mm3), both strong predictors of favorable response to neoadjuvant therapy. While the low-risk MammaPrint status and HR-positivity are factors that typically lower the likelihood of pCR, the overall clinical and imaging profile—including rapid, intense enhancement on MRI—is highly suggestive of a complete pathologic response.""
+}
+```",2333,249,4.83,1
+ISPY2-812089,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.459 (log-odds), i.e. \""against_pcr\""."", ""Evidence item \""HR\"" is marked \""against_pcr\"", but its contribution in the reference model is +0.280 (log-odds), i.e. \""supports_pcr\"".""]",0.37,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.15, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 26725, ""direction"": ""against_pcr""}]","The patient is a 58-year-old with triple-negative breast cancer (HR=0, HER2=0). The MammaPrint low-risk category (0) and a relatively high core Ktrans of 0.15 are favorable indicators for pCR. However, the large tumor volume of 26725 mm³ and the absence of HR/HER2 expression are negative prognostic factors in this context. The model predicts an intermediate pCR probability of approximately 37%, reflecting the competing influence of these clinical and imaging features.",1,0.37,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.15, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 26725, ""direction"": ""against_pcr""}]","The patient is a 58-year-old with triple-negative breast cancer (HR=0, HER2=0). The MammaPrint low-risk category (0) and a relatively high core Ktrans of 0.15 are favorable indicators for pCR. However, the large tumor volume of 26725 mm³ and the absence of HR/HER2 expression are negative prognostic factors in this context. The model predicts an intermediate pCR probability of approximately 37%, reflecting the competing influence of these clinical and imaging features.","```json
+{
+  ""pcr_probability"": 0.37,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.15, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 26725, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is a 58-year-old with triple-negative breast cancer (HR=0, HER2=0). The MammaPrint low-risk category (0) and a relatively high core Ktrans of 0.15 are favorable indicators for pCR. However, the large tumor volume of 26725 mm³ and the absence of HR/HER2 expression are negative prognostic factors in this context. The model predicts an intermediate pCR probability of approximately 37%, reflecting the competing influence of these clinical and imaging features.""
+}
+```",2391,267,7.43,1
+ISPY2-840501,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.388 (log-odds), i.e. \""against_pcr\"".""]",0.34,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 37978, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0985, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient is a young woman with triple-negative breast cancer, which typically has a high pCR rate. However, the tumor is large (volume ~38,000 mm³) and the MammaPrint result indicates a lower-risk genomic profile, which in this model paradoxically lowers the predicted pCR probability to ~34%. The MRI shows a large mass with heterogeneous enhancement and central necrosis, features often associated with residual disease. While the biology (TNBC) is favorable for response, the size and imaging phenotype suggest a significant risk of residual invasive cancer after neoadjuvant therapy.",1,0.34,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 37978, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0985, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient is a young woman with triple-negative breast cancer, which typically has a high pCR rate. However, the tumor is large (volume ~38,000 mm³) and the MammaPrint result indicates a lower-risk genomic profile, which in this model paradoxically lowers the predicted pCR probability to ~34%. The MRI shows a large mass with heterogeneous enhancement and central necrosis, features often associated with residual disease. While the biology (TNBC) is favorable for response, the size and imaging phenotype suggest a significant risk of residual invasive cancer after neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.34,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 37978, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0985, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This patient is a young woman with triple-negative breast cancer, which typically has a high pCR rate. However, the tumor is large (volume ~38,000 mm³) and the MammaPrint result indicates a lower-risk genomic profile, which in this model paradoxically lowers the predicted pCR probability to ~34%. The MRI shows a large mass with heterogeneous enhancement and central necrosis, features often associated with residual disease. While the biology (TNBC) is favorable for response, the size and imaging phenotype suggest a significant risk of residual invasive cancer after neoadjuvant therapy.""
+}
+```",2368,278,5.1,1
+ISPY2-872188,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.438 (log-odds), i.e. \""against_pcr\"".""]",0.45,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0667, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a moderate probability of achieving pCR (approx. 45%). This estimate is primarily driven by favorable tumor biology, specifically HER2-positivity and a low-risk MammaPrint classification, which are strong predictors of treatment response. However, this is partially offset by quantitative imaging features indicating lower vascular permeability in the tumor rim (safe_rim_Ktrans of 0.0667), which the model associates with a reduced likelihood of complete response. The MRI shows a mass with heterogeneous enhancement.",1,0.45,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0667, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a moderate probability of achieving pCR (approx. 45%). This estimate is primarily driven by favorable tumor biology, specifically HER2-positivity, which is a strong predictor of treatment response. However, this is partially offset by the MammaPrint classification and quantitative imaging features indicating lower vascular permeability in the tumor rim (safe_rim_Ktrans of 0.0667), which the model associates with a reduced likelihood of complete response. The MRI shows a mass with heterogeneous enhancement.","```json
+{
+  ""pcr_probability"": 0.45,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0667,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient has a moderate probability of achieving pCR (approx. 45%). This estimate is primarily driven by favorable tumor biology, specifically HER2-positivity, which is a strong predictor of treatment response. However, this is partially offset by the MammaPrint classification and quantitative imaging features indicating lower vascular permeability in the tumor rim (safe_rim_Ktrans of 0.0667), which the model associates with a reduced likelihood of complete response. The MRI shows a mass with heterogeneous enhancement.""
+}
+```",2372,285,5.24,1
+ISPY2-941191,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.350 (log-odds), i.e. \""against_pcr\"".""]",0.65,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.143, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 46256, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}]","The patient has a HER2-positive tumor with high core Ktrans (0.143) and high core kep (0.362), indicating rapid contrast uptake and washout consistent with high-grade, aggressive biology that is typically chemosensitive. These factors strongly favor a pathologic complete response (pCR). However, the large tumor volume (46256 mm³) and HR-positive status are negative prognostic indicators for pCR. The MammaPrint low-risk status provides additional support for pCR. Overall, the favorable biological markers outweigh the volume-related risk.",1,0.65,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.143, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 46256, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}]","The patient has a HER2-positive tumor with high core Ktrans (0.143) and high core kep (0.362), indicating rapid contrast uptake and washout consistent with high-grade, aggressive biology that is typically chemosensitive. These factors strongly favor a pathologic complete response (pCR). However, the large tumor volume (46256 mm³) and HR-positive status are negative prognostic indicators for pCR. The MammaPrint low-risk status provides additional support for pCR. Overall, the favorable biological markers outweigh the volume-related risk.","```json
+{
+  ""pcr_probability"": 0.65,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.143, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 46256, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient has a HER2-positive tumor with high core Ktrans (0.143) and high core kep (0.362), indicating rapid contrast uptake and washout consistent with high-grade, aggressive biology that is typically chemosensitive. These factors strongly favor a pathologic complete response (pCR). However, the large tumor volume (46256 mm³) and HR-positive status are negative prognostic indicators for pCR. The MammaPrint low-risk status provides additional support for pCR. Overall, the favorable biological markers outweigh the volume-related risk.""
+}
+```",2339,254,7.08,1
+ISPY2-981664,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.469 (log-odds), i.e. \""against_pcr\"".""]",0.415,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.123, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0481, ""direction"": ""against_pcr""}]","The patient has a moderate probability of achieving pCR (approximately 41%). This estimate is primarily driven by the favorable HER2-positive status and low-risk MammaPrint result, which are strong predictors of treatment response. However, these positive factors are partially offset by the presence of hormone receptors and relatively low quantitative perfusion parameters (core15_kep and safe_rim_Ktrans), which typically suggest a lower likelihood of complete pathological response. The tumor volume is moderate.",1,0.415,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.123, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0481, ""direction"": ""against_pcr""}]","The patient has a moderate probability of achieving pCR (approximately 41%). This estimate is primarily driven by the favorable HER2-positive status, which is a strong predictor of treatment response. However, this positive factor is partially offset by the presence of hormone receptors, the MammaPrint result (which the model weights against pCR), and relatively low quantitative perfusion parameters (core15_kep and safe_rim_Ktrans). The tumor volume is moderate.","```json
+{
+  ""pcr_probability"": 0.415,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.123, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0481, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient has a moderate probability of achieving pCR (approximately 41%). This estimate is primarily driven by the favorable HER2-positive status, which is a strong predictor of treatment response. However, this positive factor is partially offset by the presence of hormone receptors, the MammaPrint result (which the model weights against pCR), and relatively low quantitative perfusion parameters (core15_kep and safe_rim_Ktrans). The tumor volume is moderate.""
+}
+```",2343,253,4.15,1
+ISPY2-988665,heldout_test,M4,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.521 (log-odds), i.e. \""against_pcr\"".""]",0.17,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.101, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 14476, ""direction"": ""against_pcr""}]","The patient is HR-positive and HER2-negative with a large tumor volume of approximately 14,500 mm3. While the MammaPrint low-risk category (0) is a favorable prognostic factor, the combination of hormone receptor positivity and substantial tumor burden significantly reduces the likelihood of achieving a pathologic complete response (pCR). Quantitative MRI parameters show relatively low perfusion values (e.g., core15_Ktrans of 0.0798), which are typically associated with lower pCR rates in this subtype. Based on these pretreatment characteristics, the estimated probability of pCR is low at approximately 17%.",1,0.171,unlikely_pcr,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.101, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0695, ""direction"": ""against_pcr""}]","The patient is HR-positive and HER2-negative with a large tumor volume of approximately 14,500 mm3. The MammaPrint low-risk category (0) and low perfusion values (e.g., core15_kep of 0.101) are associated with a lower likelihood of achieving a pathologic complete response (pCR). The combination of these factors significantly reduces the probability of pCR. Based on the reference model and clinical features, the estimated probability of pCR is approximately 17%.","```json
+{
+  ""pcr_probability"": 0.171,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_kep"", ""value"": 0.101, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0695, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is HR-positive and HER2-negative with a large tumor volume of approximately 14,500 mm3. The MammaPrint low-risk category (0) and low perfusion values (e.g., core15_kep of 0.101) are associated with a lower likelihood of achieving a pathologic complete response (pCR). The combination of these factors significantly reduces the probability of pCR. Based on the reference model and clinical features, the estimated probability of pCR is approximately 17%.""
+}
+```",2379,265,6.24,1

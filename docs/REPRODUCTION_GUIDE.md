@@ -133,6 +133,14 @@ cmd /c scripts\run_study.bat query
 - If the run stops, start it again: completed replies are read from the cache in `results\mllm\cache\` and are **not charged twice**.
 - If many HTTP 429 errors (too many requests) appear, lower the concurrency: `$env:WORKERS="4"`.
 
+**Step 5 — follow-up experiments** (counterfactual reference test and verify-and-revise loop; about 1,300 requests, a few CNY, about 1 h):
+
+```
+cmd /c scripts\run_study.bat followup      (Linux: bash scripts/run_study.sh followup)
+```
+
+To see in advance how many replies the revision loop will send back, run `python scripts/22_verify_revise.py --mllm_dir results/mllm --provider zhipu --model glm-4.5v --dry_run`.
+
 ## 6. Tables and figures of the paper (offline, about 10 minutes)
 
 ```

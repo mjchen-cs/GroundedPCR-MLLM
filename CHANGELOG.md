@@ -8,7 +8,11 @@
   - `16_plot_workflow.py`: Fig. 1 drawn from a real case;
   - `17_extra_analyses.py`: cohort table, subtype AUROC, calibration and decision curves, evidence citation, error taxonomy, image-claim verification, repeat stability;
   - `18_b1_sensitivity.py`: B1 recalibration, logistic regression, no class weighting, depth 3, + treatment arm (preset `main_mp_arm`);
-  - `19_make_release_bundle.py`: release bundle of derived results.
+  - `19_make_release_bundle.py`: release bundle of derived results;
+  - `20_agreement_analysis.py`: disagreement between MLLM and B1 as a warning signal (offline);
+  - `21_counterfactual.py`: M3 prompt with a deliberately wrong B1 output (1 − p, with and without negated SHAP);
+  - `22_verify_revise.py`: audit-driven one-step revision of failing replies (`--dry_run` to count them);
+  - `23_evaluate_followups.py`: evaluation of steps 21–22; `src/mllm_runner.py`: shared request runner.
 - `run_study.sh` / `run_study.bat` replace the machine-specific Windows batch files; paths and models come from environment variables.
 - `check_api.py --list_models`; progress output in steps 12 and 13; default number of repeats is 2.
 - `tests/test_mllm_pipeline.sh`: offline end-to-end test with the mock model.

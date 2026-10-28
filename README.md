@@ -51,10 +51,12 @@ src/                         library code
   xgboost_utils.py           feature presets, leakage-safe CV, final model, TreeSHAP export
   mllm_client.py             OpenAI-compatible client (zhipu, siliconflow, offline mock) + reply cache
   mllm_prompts.py            prompt ladder M1–M4, output schema, few-shot selection
+  mllm_runner.py             shared request runner for the follow-up experiments
 scripts/
   00–03, 07, 11              data preparation, ROI/curves, B1 cross-validation, held-out test, SHAP
   12–14                      MLLM inputs, queries, evaluation (writes LaTeX tables and macros)
-  15–18                      figures and secondary / sensitivity analyses
+  15–18, 20                  figures and secondary / sensitivity analyses (offline)
+  21–23                      counterfactual reference test, verify-and-revise loop, their evaluation
   19_make_release_bundle.py  zip of derived results for public release
   check_api.py               one-request connectivity test for each provider
   run_study.sh / .bat        the whole study, stage by stage (Linux-macOS / Windows)
@@ -182,10 +184,18 @@ bash scripts/run_study.sh query      # 982 cases × 5 configurations × 2 repeat
 
 Check `results/mllm/runs/*/*.csv` after the pilot (`parse_ok` should be 1, `prompt_tokens` about 400–2000). The full run took about 3–4 h for Zhipu and 8–10 h for SiliconFlow with 8 parallel workers and used about 14 million tokens per provider (≈ 11.5 M input, 2.7 M output); at October 2026 prices this was roughly CNY 20–30 per provider. Every reply is cached under `results/mllm/cache/`, so re-running never pays twice and an interrupted run resumes where it stopped. If the provider returns HTTP 429, lower `WORKERS`.
 
+### 5b. Follow-up experiments (paid, small)
+
+```bash
+bash scripts/run_study.sh followup   # steps 21–22: counterfactual reference test + verify-and-revise loop
+```
+
+Step 21 re-sends the M3 prompt of the 198 held-out patients with a deliberately wrong B1 output (probability 1 − p, with and without negated SHAP values): 792 requests in total. Step 22 audits every first-repeat reply and sends only the failing ones back once with a list of their violations (about 380 requests for GLM-4.5V and 165 for Qwen3-VL in our run; check with `--dry_run`). Together they cost a few CNY. Outputs go to `results/mllm/runs_cf/` and `results/mllm/runs_revise/`.
+
 ### 6. Evaluation, tables and figures (offline)
 
 ```bash
-bash scripts/run_study.sh evaluate   # steps 14–18 (~10 min)
+bash scripts/run_study.sh evaluate   # steps 14–18, 20 and 23 if follow-ups exist (~10 min)
 ```
 
 This writes into `PAPER_DIR`:
@@ -227,6 +237,10 @@ python scripts/19_make_release_bundle.py --out_dir results --bundle release/resu
 | 17 | `17_extra_analyses.py` | cohort, subtype, error-taxonomy and image-claim tables; calibration/DCA and SHAP/citation figures; `analysis/*.csv` |
 | 18 | `18_b1_sensitivity.py` | B1 sensitivity table (recalibration, logistic regression, no weighting, depth 3, + arm) |
 | 19 | `19_make_release_bundle.py` | zip of derived results |
+| 20 | `20_agreement_analysis.py` | disagreement MLLM vs B1 as a warning signal (`tables/table_agreement_rows.tex`) |
+| 21 | `21_counterfactual.py` | `mllm/runs_cf/…/M3-flip_prob_*.csv`, `M3-flip_all_*.csv` |
+| 22 | `22_verify_revise.py` | `mllm/runs_revise/…/<config>_<split>.csv` (violations, original and revised reply) |
+| 23 | `23_evaluate_followups.py` | `tables/table_cf_rows.tex`, `tables/table_revise_rows.tex`, `analysis/counterfactual.csv`, `analysis/revise.csv` |
 
 ## Paper ↔ code
 

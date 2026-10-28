@@ -20,7 +20,10 @@ Section numbers refer to the submitted manuscript. Output paths are relative to 
 | III-H, Eq. 9 | unsupported numbers, approximations, SHAP contradictions, consistency, Jaccard | `scripts/14_evaluate_mllm.py` (`faithfulness_row`, `_supported`, `_approximates`) | `mllm/evaluation/faithfulness_*.csv` |
 | III-I | secondary analyses (i)–(vi) | `scripts/17_extra_analyses.py` | `analysis/*.csv` |
 | III-I (vii) | B1 sensitivity, Platt recalibration | `scripts/18_b1_sensitivity.py`; preset `main_mp_arm` | `analysis/b1_sensitivity.csv` |
-| III-J | bootstrap CIs (2000), paired DeLong | `scripts/14_evaluate_mllm.py` (`boot_ci`, `delong_test`) | — |
+| III-I (viii) | disagreement MLLM vs B1 as a warning signal | `scripts/20_agreement_analysis.py` | `analysis/agreement.csv` |
+| III-J | counterfactual reference test | `scripts/21_counterfactual.py`, `scripts/23_evaluate_followups.py` | `mllm/runs_cf/`, `analysis/counterfactual.csv` |
+| III-K | verify-and-revise loop | `scripts/22_verify_revise.py`, `scripts/23_evaluate_followups.py` | `mllm/runs_revise/`, `analysis/revise.csv` |
+| III-L | bootstrap CIs (2000), paired DeLong | `scripts/14_evaluate_mllm.py` (`boot_ci`, `delong_test`) | — |
 
 ## Tables
 
@@ -33,7 +36,10 @@ Section numbers refer to the submitted manuscript. Output paths are relative to 
 | V | types of unsupported numbers | 17 | `tables/table_errors_rows.tex` |
 | VI | verification of image claims | 17 | `tables/table_visual_rows.tex` |
 | VII | B1 sensitivity | 18 | `tables/table_b1_sensitivity_rows.tex` |
-| VIII, IX | faithfulness, development / held-out | 14 | `tables/table_faithfulness_rows.tex`, `table_faithfulness_test_rows.tex` |
+| VIII | disagreement as a warning signal | 20 | `tables/table_agreement_rows.tex` |
+| IX | counterfactual reference test | 23 | `tables/table_cf_rows.tex` |
+| X | verify-and-revise loop | 23 | `tables/table_revise_rows.tex` |
+| XI, XII | faithfulness, development / held-out | 14 | `tables/table_faithfulness_rows.tex`, `table_faithfulness_test_rows.tex` |
 | text | all `\res...` numbers | 14 | `results_macros.tex` |
 
 ## Figures

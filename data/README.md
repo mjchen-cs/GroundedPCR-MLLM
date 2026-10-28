@@ -20,6 +20,8 @@ OUT_DIR=data PAPER_DIR=paper bash scripts/run_study.sh evaluate
 | `sens/` | development CV of the B1 sensitivity variants (no class weighting, depth 3, + treatment arm, re-run in a second environment) | step 03 |
 | `mllm/cases.jsonl` | one record per patient: split, fold, label, subtype, clinical covariates, B1 features, B1 probability, SHAP values — exactly what the prompts were built from | step 12 |
 | `mllm/runs/<provider>__<model>/<config>_<split>.csv` | **all 19,640 MLLM replies** (GLM-4.5V, Qwen3-VL-32B-Instruct; M1, M2, M3f, M3, M4; development and held-out; 2 repeats): parsed probability, conclusion, evidence, report, raw reply text, tokens, latency | step 13 |
+| `mllm/runs_cf/<provider>__<model>/M3-<variant>_heldout_test.csv` | counterfactual reference test: 4 × 198 replies to the M3 prompt with an inverted B1 probability (`flip_prob`) or inverted probability and SHAP values (`flip_all`) | step 21 |
+| `mllm/runs_revise/<provider>__<model>/<config>_<split>.csv`, `..._audit.csv` | verify-and-revise loop: audit of every first-repeat reply, and for each failing reply the violations, the original and the revised reply | step 22 |
 | `mllm/images/ACRIN-6698-102212.png` | the input panel of the case shown in Fig. 1 | step 12 |
 
 ## What is *not* here, and how to get it

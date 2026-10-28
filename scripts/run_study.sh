@@ -10,7 +10,8 @@
 #     export     step 12      cases.jsonl + 2x2 image panels for the MLLMs
 #     pilot      step 13      20 development cases, 1 repeat, both providers (cost / format check)
 #     query      step 13      all cases, both splits, both providers (needs API keys; paid)
-#     evaluate   steps 14-18  metrics, tables, figures, secondary analyses (offline)
+#     followup   steps 21-22  counterfactual reference test + verify-and-revise loop (paid, ~1-2k requests)
+#     evaluate   steps 14-18, 20, 23  metrics, tables, figures, secondary analyses (offline)
 #     all        features + b1 + export + query + evaluate
 #
 #   Paths and models are read from environment variables (defaults below), e.g.
@@ -87,6 +88,12 @@ query() {  # $1 split, extra args
   $PY scripts/13_run_mllm.py --mllm_dir "$M" --provider zhipu --model "$ZHIPU_MODEL" --disable_thinking --split "$S" --workers "$WORKERS" "$@"
   $PY scripts/13_run_mllm.py --mllm_dir "$M" --provider siliconflow --model "$SF_MODEL" --split "$S" --workers "$WORKERS" "$@"
 }
+stage_followup() {
+  $PY scripts/21_counterfactual.py --mllm_dir "$M" --provider zhipu --model "$ZHIPU_MODEL" --disable_thinking --workers "$WORKERS"
+  $PY scripts/21_counterfactual.py --mllm_dir "$M" --provider siliconflow --model "$SF_MODEL" --workers "$WORKERS"
+  $PY scripts/22_verify_revise.py --mllm_dir "$M" --provider zhipu --model "$ZHIPU_MODEL" --disable_thinking --workers "$WORKERS"
+  $PY scripts/22_verify_revise.py --mllm_dir "$M" --provider siliconflow --model "$SF_MODEL" --workers "$WORKERS"
+}
 stage_pilot() { query development --limit 20 --repeats 1; echo "Pilot done: check $M/runs/*/*.csv (parse_ok, tokens)."; }
 stage_query() { for S in development heldout_test; do query "$S" --repeats "$REPEATS"; done; }
 
@@ -104,6 +111,10 @@ stage_evaluate() {
   # optional: B1 re-trained in a second computing environment (shipped in data/sens/repro)
   [ -s "$OUT_DIR/sens/repro/xgboost_predictions.csv" ] && SENS+=("Re-run of B1 in a second environment=$OUT_DIR/sens/repro")
   $PY scripts/18_b1_sensitivity.py --b1_dir "$OUT_DIR/b1" --out_dir "$PAPER_DIR" --runs "${SENS[@]}"
+  $PY scripts/20_agreement_analysis.py --mllm_dir "$M" --out_dir "$PAPER_DIR"
+  if [ -d "$M/runs_cf" ] || [ -d "$M/runs_revise" ]; then
+    $PY scripts/23_evaluate_followups.py --mllm_dir "$M" --out_dir "$PAPER_DIR"
+  fi
   echo "Done. Tables, macros and figures are in $PAPER_DIR"
 }
 
@@ -113,7 +124,8 @@ case "$STAGE" in
   export)   stage_export ;;
   pilot)    stage_pilot ;;
   query)    stage_query ;;
+  followup) stage_followup ;;
   evaluate) stage_evaluate ;;
-  all)      stage_features; stage_b1; stage_export; stage_query; stage_evaluate ;;
+  all)      stage_features; stage_b1; stage_export; stage_query; stage_followup; stage_evaluate ;;
   *) echo "unknown stage: $STAGE"; exit 2 ;;
 esac

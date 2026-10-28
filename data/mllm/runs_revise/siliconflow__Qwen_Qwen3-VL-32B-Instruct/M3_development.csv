@@ -1,0 +1,2147 @@
+pid,split,config,violations,orig_probability,orig_conclusion,orig_evidence,orig_report,parse_ok,probability,conclusion,evidence,report,raw_text,prompt_tokens,completion_tokens,latency_s,cached
+ACRIN-6698-202535,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.407 (log-odds), i.e. \""against_pcr\"".""]",0.49,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 32, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.164, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 21662, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young, HER2-positive, and has a low MammaPrint risk, all favoring pCR. The core15_Ktrans is moderately elevated, supporting response. However, the tumor volume is large, which is a negative factor. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging biomarker for pCR is present. Overall, the prediction is uncertain, with balanced supportive and opposing factors.",1,0.49,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 32, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.164, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 21662, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young, HER2-positive, and has a low MammaPrint risk, all favoring pCR. The core15_Ktrans is moderately elevated, supporting response. However, the tumor volume is large, which is a negative factor. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging biomarker for pCR is present. Overall, the prediction is uncertain, with balanced supportive and opposing factors.","{
+  ""pcr_probability"": 0.49,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 32,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.164,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 21662,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young, HER2-positive, and has a low MammaPrint risk, all favoring pCR. The core15_Ktrans is moderately elevated, supporting response. However, the tumor volume is large, which is a negative factor. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging biomarker for pCR is present. Overall, the prediction is uncertain, with balanced supportive and opposing factors.""
+}",1617,304,16.36,1
+ACRIN-6698-301665,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.262 (log-odds), i.e. \""against_pcr\"".""]",0.357,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 41103, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0862, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The tumor shows heterogeneous enhancement on MRI, with a relatively high Ktrans in the safe rim, which may indicate better response potential. However, the large tumor size and hormone receptor positivity are associated with lower pCR likelihood. The MammaPrint status is low-risk, which is favorable. Overall, the model predicts a moderate pCR probability, but the case remains uncertain due to conflicting factors.",1,0.357,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 41103, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0862, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The tumor shows heterogeneous enhancement on MRI, with a relatively high Ktrans in the safe rim, which may indicate better response potential. However, the large tumor size and hormone receptor positivity are associated with lower pCR likelihood. The MammaPrint status is low-risk, which is favorable. Overall, the model predicts a moderate pCR probability, but the case remains uncertain due to conflicting factors.","{
+  ""pcr_probability"": 0.357,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 41103,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0862,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The tumor shows heterogeneous enhancement on MRI, with a relatively high Ktrans in the safe rim, which may indicate better response potential. However, the large tumor size and hormone receptor positivity are associated with lower pCR likelihood. The MammaPrint status is low-risk, which is favorable. Overall, the model predicts a moderate pCR probability, but the case remains uncertain due to conflicting factors.""
+}",1638,316,34.08,1
+ACRIN-6698-384830,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.391 (log-odds), i.e. \""against_pcr\"".""]",0.471,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 55721, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.174, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, while HR positivity and large tumor size are unfavorable. Core15_kep is modest, suggesting moderate perfusion. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts a 47% chance of pCR, indicating uncertainty.",1,0.471,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 55721, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.174, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, while HR positivity and large tumor size are unfavorable. Core15_kep is modest, suggesting moderate perfusion. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts a 47% chance of pCR, indicating uncertainty.","{
+  ""pcr_probability"": 0.471,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 55721,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.174,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, while HR positivity and large tumor size are unfavorable. Core15_kep is modest, suggesting moderate perfusion. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts a 47% chance of pCR, indicating uncertainty.""
+}",1631,314,33.87,1
+ACRIN-6698-435279,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.557 (log-odds), i.e. \""against_pcr\"".""]",0.341,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.094, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0785, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a hormone receptor-positive, HER2-negative tumor with a moderate-sized enhancing lesion on MRI. The MammaPrint status is low-risk, which supports pCR, while HR positivity and HER2 negativity are against pCR. The rim region shows moderate perfusion (safe_rim_kep = 0.094, safe_rim_Ktrans = 0.0785), which supports pCR. The overall model prediction is 0.341, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.341,uncertain,"[{""feature"": ""safe_rim_kep"", ""value"": 0.094, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0785, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient has a hormone receptor-positive, HER2-negative tumor with a moderate-sized enhancing lesion on MRI. The MammaPrint status is low-risk, which is associated with lower pCR likelihood in the model. HR positivity and HER2 negativity are against pCR. The rim region shows moderate perfusion (safe_rim_kep = 0.094, safe_rim_Ktrans = 0.0785), which supports pCR. The overall model prediction is 0.341, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.341,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.094,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0785,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient has a hormone receptor-positive, HER2-negative tumor with a moderate-sized enhancing lesion on MRI. The MammaPrint status is low-risk, which is associated with lower pCR likelihood in the model. HR positivity and HER2 negativity are against pCR. The rim region shows moderate perfusion (safe_rim_kep = 0.094, safe_rim_Ktrans = 0.0785), which supports pCR. The overall model prediction is 0.341, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1642,334,15.09,1
+ACRIN-6698-511851,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.495 (log-odds), i.e. \""against_pcr\"".""]",0.349,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.35, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.235, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 19224, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 48 years old with hormone receptor-positive, HER2-negative, non-TNBC breast cancer. The tumor is large (19224 mm³) with moderate enhancement. MammaPrint low-risk status supports pCR, while HER2 negativity and large volume are against it. Core15_kep is favorable, but safe_rim_kep is less so. Overall, the model predicts 34.9% pCR probability, indicating uncertainty. Consider neoadjuvant therapy with close monitoring.",1,0.349,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.35, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.235, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 19224, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 48 years old with hormone receptor-positive, HER2-negative, non-TNBC breast cancer. The tumor is large (19224 mm³) with moderate enhancement. MammaPrint low-risk status is associated with lower pCR probability in the model. HER2 negativity and large volume are against pCR. Core15_kep is favorable, but safe_rim_kep is less so. Overall, the model predicts 34.9% pCR probability, indicating uncertainty. Consider neoadjuvant therapy with close monitoring.","{
+  ""pcr_probability"": 0.349,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.35,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.235,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 19224,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 48 years old with hormone receptor-positive, HER2-negative, non-TNBC breast cancer. The tumor is large (19224 mm³) with moderate enhancement. MammaPrint low-risk status is associated with lower pCR probability in the model. HER2 negativity and large volume are against pCR. Core15_kep is favorable, but safe_rim_kep is less so. Overall, the model predicts 34.9% pCR probability, indicating uncertainty. Consider neoadjuvant therapy with close monitoring.""
+}",1649,336,40.0,1
+ACRIN-6698-516834,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.448 (log-odds), i.e. \""against_pcr\"".""]",0.31,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.182, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1387, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 1387 mm³, with a core15_kep of 0.182, which is associated with lower pCR likelihood. The model predicts 31% pCR probability, with core15_kep and HER2 status opposing response, while MammaPrint and tumour volume support it. Visual assessment shows a moderately enhancing mass with a defined rim, but no features strongly predict pCR. Overall, response is uncertain.",1,0.31,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.182, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1387, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 1387 mm³, with a core15_kep of 0.182, which is associated with lower pCR likelihood. The model predicts 31% pCR probability, with core15_kep, MammaPrint, HER2, and HR all opposing response, while tumour volume supports it. Visual assessment shows a moderately enhancing mass with a defined rim, but no features strongly predict pCR. Overall, response is uncertain.","{
+  ""pcr_probability"": 0.31,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.182,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 1387,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 1387 mm³, with a core15_kep of 0.182, which is associated with lower pCR likelihood. The model predicts 31% pCR probability, with core15_kep, MammaPrint, HER2, and HR all opposing response, while tumour volume supports it. Visual assessment shows a moderately enhancing mass with a defined rim, but no features strongly predict pCR. Overall, response is uncertain.""
+}",1647,341,15.23,1
+ACRIN-6698-522140,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.433 (log-odds), i.e. \""against_pcr\"".""]",0.358,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 55, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5360, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.32, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 55 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 5360 mm³, with moderate core Ktrans and kep. The model predicts 35.8% pCR probability. Key factors: low MammaPrint supports pCR, while older age and HER2-negative status reduce it. Tumor size and core kep are favorable. Imaging shows a well-defined enhancing lesion with a rim, but no specific features strongly predict response. Overall, pCR is uncertain.",1,0.358,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 55, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5360, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.32, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 55 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 5360 mm³, with moderate core Ktrans and kep. The model predicts 35.8% pCR probability. Key factors: low MammaPrint and HER2-negative status reduce pCR likelihood, while older age also reduces it. Tumor size and core kep are favorable. Imaging shows a well-defined enhancing lesion with a rim, but no specific features strongly predict response. Overall, pCR is uncertain.","{
+  ""pcr_probability"": 0.358,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 55,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 5360,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.32,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 55 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 5360 mm³, with moderate core Ktrans and kep. The model predicts 35.8% pCR probability. Key factors: low MammaPrint and HER2-negative status reduce pCR likelihood, while older age also reduces it. Tumor size and core kep are favorable. Imaging shows a well-defined enhancing lesion with a rim, but no specific features strongly predict response. Overall, pCR is uncertain.""
+}",1642,333,25.47,1
+ACRIN-6698-724384,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.338 (log-odds), i.e. \""against_pcr\"".""]",0.328,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 43, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4788, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 43 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 4788 mm³. MRI shows a moderately enhancing mass with a rim-to-core volume ratio of 1.2. The reference model predicts 32.8% pCR probability. Key factors: younger age and lower risk MammaPrint support pCR, while HR positivity and HER2 negativity oppose it. Tumor size supports pCR. Overall, response is uncertain.",1,0.328,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 43, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4788, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 43 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 4788 mm³. MRI shows a moderately enhancing mass with a rim-to-core volume ratio of 1.2. The reference model predicts 32.8% pCR probability. Key factors: younger age and lower risk MammaPrint support pCR, while HR positivity and HER2 negativity oppose it. Tumor size supports pCR. Overall, response is uncertain.","{
+  ""pcr_probability"": 0.328,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 43,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4788,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 43 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. Tumor volume is 4788 mm³. MRI shows a moderately enhancing mass with a rim-to-core volume ratio of 1.2. The reference model predicts 32.8% pCR probability. Key factors: younger age and lower risk MammaPrint support pCR, while HR positivity and HER2 negativity oppose it. Tumor size supports pCR. Overall, response is uncertain.""
+}",1630,317,46.27,1
+ACRIN-6698-641977,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.516 (log-odds), i.e. \""against_pcr\"".""]",0.312,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.317, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative, non-TNBC disease with a MammaPrint low-risk profile, which is generally associated with lower pCR rates. However, the tumour shows moderate enhancement and a relatively large rim-to-core volume ratio, which may indicate better response potential. The core15_kep and safe_rim_kep values are moderately elevated, suggesting some vascular permeability. Overall, the model predicts a 31.2% chance of pCR, which is borderline. Consider close monitoring during therapy.",1,0.312,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.317, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative, non-TNBC disease with a MammaPrint low-risk profile, which is generally associated with lower pCR rates. However, the tumour shows moderate enhancement and a relatively large rim-to-core volume ratio, which may indicate better response potential. The core15_kep and safe_rim_kep values are moderately elevated, suggesting some vascular permeability. Overall, the model predicts a 31.2% chance of pCR, which is borderline. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.312,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.317,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has hormone receptor-positive, HER2-negative, non-TNBC disease with a MammaPrint low-risk profile, which is generally associated with lower pCR rates. However, the tumour shows moderate enhancement and a relatively large rim-to-core volume ratio, which may indicate better response potential. The core15_kep and safe_rim_kep values are moderately elevated, suggesting some vascular permeability. Overall, the model predicts a 31.2% chance of pCR, which is borderline. Consider close monitoring during therapy.""
+}",1645,326,16.81,1
+ACRIN-6698-721099,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.435 (log-odds), i.e. \""against_pcr\"".""]",0.566,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4054, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.174, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0778, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, and has a moderately large tumor volume, also favoring response. The safe rim shows moderate perfusion (kep=0.174), which is supportive. However, core Ktrans is low (0.0778), which may indicate less aggressive biology and is against pCR. MammaPrint low-risk status is favorable. Overall, the model predicts 56.6% pCR probability, suggesting uncertainty. Consider close monitoring during therapy.",1,0.566,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4054, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.174, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0778, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, and has a moderately large tumor volume, also favoring response. The safe rim shows moderate perfusion (kep=0.174), which is supportive. However, core Ktrans is low (0.0778), which may indicate less aggressive biology and is against pCR. MammaPrint low-risk status is associated with lower pCR probability in the model. Overall, the model predicts 56.6% pCR probability, suggesting uncertainty. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.566,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4054,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.174,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0778,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which supports pCR, and has a moderately large tumor volume, also favoring response. The safe rim shows moderate perfusion (kep=0.174), which is supportive. However, core Ktrans is low (0.0778), which may indicate less aggressive biology and is against pCR. MammaPrint low-risk status is associated with lower pCR probability in the model. Overall, the model predicts 56.6% pCR probability, suggesting uncertainty. Consider close monitoring during therapy.""
+}",1646,337,15.2,1
+ACRIN-6698-691753,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.542 (log-odds), i.e. \""against_pcr\"".""]",0.335,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0822, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a MammaPrint low-risk profile, which together suggest lower pCR likelihood. However, the tumour shows a relatively high rim-to-core volume ratio and moderate rim Ktrans, features associated with better response. The overall model prediction is 0.335, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.335,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0822, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a MammaPrint low-risk profile, which together suggest lower pCR likelihood. However, the tumour shows a relatively high rim-to-core volume ratio and moderate rim Ktrans, features associated with better response. The overall model prediction is 0.335, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.335,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0822,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has hormone receptor-positive, HER2-negative disease with a MammaPrint low-risk profile, which together suggest lower pCR likelihood. However, the tumour shows a relatively high rim-to-core volume ratio and moderate rim Ktrans, features associated with better response. The overall model prediction is 0.335, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1616,297,12.31,1
+ACRIN-6698-779739,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.404 (log-odds), i.e. \""against_pcr\"".""]",0.454,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.196, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.128, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, the core and rim kep values are relatively low, which may reduce response likelihood. MammaPrint low-risk status supports pCR, while HR positivity is a negative factor. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive imaging features predict pCR. Overall, the model predicts moderate pCR probability with mixed evidence.",1,0.454,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.196, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.128, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, the core and rim kep values are relatively low, which may reduce response likelihood. MammaPrint low-risk status is associated with lower pCR probability in the model, while HR positivity is a negative factor. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive imaging features predict pCR. Overall, the model predicts moderate pCR probability with mixed evidence.","{
+  ""pcr_probability"": 0.454,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.196,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.128,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, the core and rim kep values are relatively low, which may reduce response likelihood. MammaPrint low-risk status is associated with lower pCR probability in the model, while HR positivity is a negative factor. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive imaging features predict pCR. Overall, the model predicts moderate pCR probability with mixed evidence.""
+}",1633,321,13.83,1
+ACRIN-6698-896852,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.311 (log-odds), i.e. \""against_pcr\"".""]",0.344,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 53020, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 41, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.216, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which supports pCR, while the large tumor volume and elevated core15_kep are against it. Age is favorable. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts moderate pCR probability, and the case remains uncertain.",1,0.344,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 53020, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 41, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.216, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR probability in the model. The large tumor volume and elevated core15_kep are against pCR, while age is favorable. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts moderate pCR probability, and the case remains uncertain.","{
+  ""pcr_probability"": 0.344,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 53020,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 41,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.216,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR probability in the model. The large tumor volume and elevated core15_kep are against pCR, while age is favorable. The MRI shows a heterogeneous enhancing mass with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts moderate pCR probability, and the case remains uncertain.""
+}",1630,317,23.04,1
+ACRIN-6698-794128,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.516 (log-odds), i.e. \""against_pcr\"".""]",0.382,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.117, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.279, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement on MRI. The MammaPrint status is low-risk, which supports pCR, while the HER2-negative status and elevated core15_kep are against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. Overall, the model predicts a 38% chance of pCR, with conflicting features. The visual appearance shows a heterogeneous, rim-enhancing lesion, typical of aggressive biology, but not definitive for response. Consider close monitoring during therapy.",1,0.382,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.117, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.279, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement on MRI. The MammaPrint status is low-risk, which is associated with lower pCR probability in the model, while the HER2-negative status and elevated core15_kep are against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. Overall, the model predicts a 38% chance of pCR, with conflicting features. The visual appearance shows a heterogeneous, rim-enhancing lesion, typical of aggressive biology, but not definitive for response. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.382,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.117,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.279,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement on MRI. The MammaPrint status is low-risk, which is associated with lower pCR probability in the model, while the HER2-negative status and elevated core15_kep are against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. Overall, the model predicts a 38% chance of pCR, with conflicting features. The visual appearance shows a heterogeneous, rim-enhancing lesion, typical of aggressive biology, but not definitive for response. Consider close monitoring during therapy.""
+}",1649,335,37.77,1
+ACRIN-6698-879224,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.535 (log-odds), i.e. \""against_pcr\"".""]",0.377,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.218, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16644, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_volume_mm3"", ""value"": 2996, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate core Ktrans, which are mixed predictors for pCR. The MammaPrint low-risk status and hormone receptor negativity support pCR, while large tumour and rim volumes are against it. The reference model predicts 37.7% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.377,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.218, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16644, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_volume_mm3"", ""value"": 2996, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate core Ktrans, which are mixed predictors for pCR. The MammaPrint low-risk status is against pCR, while hormone receptor negativity and moderate core Ktrans support it. Large tumour and rim volumes are against pCR. The reference model predicts 37.7% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.377,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.218,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 16644,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_volume_mm3"",
+      ""value"": 2996,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has triple-negative breast cancer with a large tumour volume and moderate core Ktrans, which are mixed predictors for pCR. The MammaPrint low-risk status is against pCR, while hormone receptor negativity and moderate core Ktrans support it. Large tumour and rim volumes are against pCR. The reference model predicts 37.7% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1618,311,50.55,1
+ISPY2-109980,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.341 (log-odds), i.e. \""against_pcr\"".""]",0.355,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.15, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0922, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, core perfusion parameters (Ktrans and kep) are low, which is associated with lower pCR likelihood. The MammaPrint status is low-risk, which may favor response. Overall, the model predicts a 35.5% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.355,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.15, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0922, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, core perfusion parameters (Ktrans and kep) are low, which is associated with lower pCR likelihood. The MammaPrint status is low-risk, which may favor response. Overall, the model predicts a 35.5% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.355,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.15,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0922,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, core perfusion parameters (Ktrans and kep) are low, which is associated with lower pCR likelihood. The MammaPrint status is low-risk, which may favor response. Overall, the model predicts a 35.5% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1633,311,20.98,1
+ISPY2-127791,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.378 (log-odds), i.e. \""against_pcr\"".""]",0.513,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 44, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.136, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a MammaPrint low-risk profile. The model predicts a 51% chance of pCR, with HER2 and younger age supporting response, while HR positivity and moderate Ktrans values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. Overall, the probability is borderline, and response is uncertain.",1,0.513,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 44, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.136, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a MammaPrint low-risk profile. The model predicts a 51% chance of pCR, with HER2 and younger age supporting response, while HR positivity, MammaPrint low-risk status, and moderate Ktrans values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. Overall, the probability is borderline, and response is uncertain.","{
+  ""pcr_probability"": 0.513,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 44,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.136,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a MammaPrint low-risk profile. The model predicts a 51% chance of pCR, with HER2 and younger age supporting response, while HR positivity, MammaPrint low-risk status, and moderate Ktrans values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. Overall, the probability is borderline, and response is uncertain.""
+}",1607,302,13.26,1
+ACRIN-6698-901705,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.472 (log-odds), i.e. \""against_pcr\"".""]",0.335,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 42, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.148, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a pretreatment MRI showing a large enhancing lesion with heterogeneous enhancement kinetics. The model predicts a 33.5% chance of pCR. Younger age and low MammaPrint risk support pCR, while hormone receptor positivity and HER2 negativity are against it. The rim efflux rate (safe_rim_kep) is modestly supportive. The tumor volume is large, which is unfavorable. Overall, the evidence is mixed, and response is uncertain.",1,0.335,uncertain,"[{""feature"": ""age"", ""value"": 42, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.148, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a pretreatment MRI showing a large enhancing lesion with heterogeneous enhancement kinetics. The model predicts a 33.5% chance of pCR. Younger age supports pCR, while hormone receptor positivity, HER2 negativity, and low MammaPrint risk are against it. The rim efflux rate (safe_rim_kep) is modestly supportive. The tumor volume is large, which is unfavorable. Overall, the evidence is mixed, and response is uncertain.","{
+  ""pcr_probability"": 0.335,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""age"",
+      ""value"": 42,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.148,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has a pretreatment MRI showing a large enhancing lesion with heterogeneous enhancement kinetics. The model predicts a 33.5% chance of pCR. Younger age supports pCR, while hormone receptor positivity, HER2 negativity, and low MammaPrint risk are against it. The rim efflux rate (safe_rim_kep) is modestly supportive. The tumor volume is large, which is unfavorable. Overall, the evidence is mixed, and response is uncertain.""
+}",1622,305,22.42,1
+ISPY2-141782,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.468 (log-odds), i.e. \""against_pcr\"".""]",0.399,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.13, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0846, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3855, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but has low core15 Ktrans and kep, which are against pCR. MammaPrint low risk also supports pCR, while larger tumor volume supports pCR. The overall prediction is uncertain, with a 39.9% probability of pCR. The MRI shows a moderately enhancing mass with a defined rim, but no features strongly predict response. Consider close monitoring during therapy.",1,0.399,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.13, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0846, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3855, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but has low core15 Ktrans and kep, which are against pCR. MammaPrint low risk is against pCR in the model, while larger tumor volume supports pCR. The overall prediction is uncertain, with a 39.9% probability of pCR. The MRI shows a moderately enhancing mass with a defined rim, but no features strongly predict response. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.399,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.13,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0846,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3855,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which supports pCR, but has low core15 Ktrans and kep, which are against pCR. MammaPrint low risk is against pCR in the model, while larger tumor volume supports pCR. The overall prediction is uncertain, with a 39.9% probability of pCR. The MRI shows a moderately enhancing mass with a defined rim, but no features strongly predict response. Consider close monitoring during therapy.""
+}",1628,316,11.72,1
+ISPY2-166412,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.436 (log-odds), i.e. \""against_pcr\"".""]",0.513,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.362, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16131, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 37, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_kep value supports pCR, while tumor size and MammaPrint status are neutral or slightly against. The model predicts a 51.3% chance of pCR, indicating uncertainty. Consider neoadjuvant therapy with HER2-targeted agents; response monitoring is recommended.",1,0.513,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.362, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16131, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 37, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_kep value supports pCR, while tumor size and MammaPrint status are neutral or slightly against. The model predicts a 51.3% chance of pCR, indicating uncertainty. Consider neoadjuvant therapy with HER2-targeted agents; response monitoring is recommended.","{
+  ""pcr_probability"": 0.513,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.362,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 16131,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 37,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_kep value supports pCR, while tumor size and MammaPrint status are neutral or slightly against. The model predicts a 51.3% chance of pCR, indicating uncertainty. Consider neoadjuvant therapy with HER2-targeted agents; response monitoring is recommended.""
+}",1607,294,46.04,1
+ISPY2-128051,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.481 (log-odds), i.e. \""against_pcr\"".""]",0.368,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0553, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7465, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and low-risk MammaPrint status, which are favorable for pCR. However, the low Ktrans in the safe rim and hormone receptor positivity are less favorable. The MRI shows a large, heterogeneous enhancing mass with a defined rim, but no definitive features of high response likelihood. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.",1,0.368,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0553, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7465, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and low-risk MammaPrint status, which are favorable for pCR. However, the low Ktrans in the safe rim and hormone receptor positivity are less favorable. The MRI shows a large, heterogeneous enhancing mass with a defined rim, but no definitive features of high response likelihood. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.","{
+  ""pcr_probability"": 0.368,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0553,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 7465,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and low-risk MammaPrint status, which are favorable for pCR. However, the low Ktrans in the safe rim and hormone receptor positivity are less favorable. The MRI shows a large, heterogeneous enhancing mass with a defined rim, but no definitive features of high response likelihood. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.""
+}",1619,306,44.36,1
+ISPY2-273691,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.310 (log-odds), i.e. \""against_pcr\"".""]",0.495,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0979, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.218, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio suggesting heterogeneous enhancement. The core Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity supports pCR, while HR positivity and MammaPrint low-risk status are against it. The MRI shows a well-defined mass with heterogeneous enhancement, but no definitive imaging features predict pCR. Overall, the probability is near 50%, so response is uncertain.",1,0.495,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0979, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.218, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio suggesting heterogeneous enhancement. The core Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity supports pCR, while HR positivity and MammaPrint low-risk status are against it. The MRI shows a well-defined mass with heterogeneous enhancement, but no definitive imaging features predict pCR. Overall, the probability is near 50%, so response is uncertain.","{
+  ""pcr_probability"": 0.495,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0979,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.218,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume and a rim-to-core volume ratio suggesting heterogeneous enhancement. The core Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity supports pCR, while HR positivity and MammaPrint low-risk status are against it. The MRI shows a well-defined mass with heterogeneous enhancement, but no definitive imaging features predict pCR. Overall, the probability is near 50%, so response is uncertain.""
+}",1648,326,12.98,1
+ISPY2-201873,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.405 (log-odds), i.e. \""against_pcr\"".""]",0.305,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 108658, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_volume_mm3"", ""value"": 16299, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a large tumor volume, which are mixed predictors for pCR. The MammaPrint low-risk status supports pCR, but the large tumor size and HR positivity are against it. The MRI shows a heterogeneous enhancement pattern with a prominent rim, which may indicate treatment resistance. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.",1,0.305,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 108658, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_volume_mm3"", ""value"": 16299, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a large tumor volume, which are mixed predictors for pCR. The MammaPrint low-risk status is associated with lower pCR probability in the model, while HER2 positivity supports pCR. The large tumor size and HR positivity are against pCR. The MRI shows a heterogeneous enhancement pattern with a prominent rim, which may indicate treatment resistance. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.","{
+  ""pcr_probability"": 0.305,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 108658,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_volume_mm3"",
+      ""value"": 16299,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a large tumor volume, which are mixed predictors for pCR. The MammaPrint low-risk status is associated with lower pCR probability in the model, while HER2 positivity supports pCR. The large tumor size and HR positivity are against pCR. The MRI shows a heterogeneous enhancement pattern with a prominent rim, which may indicate treatment resistance. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.""
+}",1629,317,21.98,1
+ISPY2-250274,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.400 (log-odds), i.e. \""against_pcr\""."", ""The report contains number(s) that do not appear in the information provided: 50%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.509,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13078, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.293, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, while HR positivity and large tumor size are unfavorable. Core perfusion parameters (Ktrans and kep) are moderate, and the rim-to-core volume ratio is borderline favorable. The overall prediction is uncertain, with competing factors balancing around 50% pCR probability.",1,0.509,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13078, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.293, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR likelihood. HR positivity and large tumor size are unfavorable. Core perfusion parameters (Ktrans and kep) are moderate, and the rim-to-core volume ratio is borderline favorable. The overall prediction is uncertain, with competing factors balancing around the reference model's output.","{
+  ""pcr_probability"": 0.509,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 13078,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.293,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a large tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR likelihood. HR positivity and large tumor size are unfavorable. Core perfusion parameters (Ktrans and kep) are moderate, and the rim-to-core volume ratio is borderline favorable. The overall prediction is uncertain, with competing factors balancing around the reference model's output.""
+}",1669,305,46.1,1
+ISPY2-279902,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.623 (log-odds), i.e. \""against_pcr\"".""]",0.357,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3304, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0706, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative breast cancer and a moderate tumor volume. MammaPrint status is low-risk, which supports pCR, but HR positivity and HER2 negativity are associated with lower pCR likelihood. The tumor shows heterogeneous enhancement with a relatively low Ktrans in the safe rim, which is also against pCR. Overall, the model predicts a 35.7% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.357,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3304, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0706, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative breast cancer and a moderate tumor volume. MammaPrint status is low-risk, which is associated with lower pCR likelihood. HR positivity and HER2 negativity also reduce pCR probability. The tumor shows heterogeneous enhancement with a relatively low Ktrans in the safe rim, which is against pCR. Overall, the model predicts a 35.7% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.357,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3304,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0706,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 42 years old with hormone receptor-positive, HER2-negative breast cancer and a moderate tumor volume. MammaPrint status is low-risk, which is associated with lower pCR likelihood. HR positivity and HER2 negativity also reduce pCR probability. The tumor shows heterogeneous enhancement with a relatively low Ktrans in the safe rim, which is against pCR. Overall, the model predicts a 35.7% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1636,320,23.31,1
+ISPY2-264678,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.434 (log-odds), i.e. \""against_pcr\"".""]",0.327,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.186, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2871, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 2871 mm³, with a core15_kep of 0.186 and a rim-to-core volume ratio of 1.2. The model predicts a 32.7% chance of pCR. Core15_kep and HER2 status are against pCR, while MammaPrint and tumour volume support it. The image shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the probability is borderline, and response should be monitored closely.",1,0.327,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.186, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2871, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 2871 mm³, with a core15_kep of 0.186 and a rim-to-core volume ratio of 1.2. The model predicts a 32.7% chance of pCR. Core15_kep, MammaPrint, HER2, and rim-to-core ratio are against pCR, while tumour volume supports it. The image shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the probability is borderline, and response should be monitored closely.","{
+  ""pcr_probability"": 0.327,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.186,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 2871,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 46 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 2871 mm³, with a core15_kep of 0.186 and a rim-to-core volume ratio of 1.2. The model predicts a 32.7% chance of pCR. Core15_kep, MammaPrint, HER2, and rim-to-core ratio are against pCR, while tumour volume supports it. The image shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the probability is borderline, and response should be monitored closely.""
+}",1674,363,45.32,1
+ISPY2-301289,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.421 (log-odds), i.e. \""against_pcr\"".""]",0.378,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.327, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.124, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative disease and a MammaPrint low-risk profile. The tumour shows moderate enhancement with a relatively high core Ktrans and a rim-to-core volume ratio of 1.2, which may support pCR. However, HR positivity and MammaPrint status reduce the likelihood. The model predicts a 37.8% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.378,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.327, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.124, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative disease and a MammaPrint low-risk profile. The tumour shows moderate enhancement with a relatively high core Ktrans and a rim-to-core volume ratio of 1.2, which may support pCR. However, HR positivity and MammaPrint status reduce the likelihood. The model predicts a 37.8% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.378,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.327,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.124,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 42 years old with hormone receptor-positive, HER2-negative disease and a MammaPrint low-risk profile. The tumour shows moderate enhancement with a relatively high core Ktrans and a rim-to-core volume ratio of 1.2, which may support pCR. However, HR positivity and MammaPrint status reduce the likelihood. The model predicts a 37.8% chance of pCR, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1641,323,32.9,1
+ISPY2-420523,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.528 (log-odds), i.e. \""against_pcr\"".""]",0.414,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0685, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7912, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive and has a lower-risk MammaPrint profile, both favoring pCR. However, hormone receptor positivity and lower rim Ktrans suggest reduced response likelihood. Tumor volume is moderately large, which may support pCR. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive features strongly predict outcome. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.",1,0.414,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0685, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7912, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which favors pCR, but has hormone receptor positivity and a lower-risk MammaPrint profile, both of which are associated with lower pCR likelihood in the model. The tumor volume is moderately large, which may support pCR. MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive features strongly predict outcome. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.","{
+  ""pcr_probability"": 0.414,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0685,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 7912,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which favors pCR, but has hormone receptor positivity and a lower-risk MammaPrint profile, both of which are associated with lower pCR likelihood in the model. The tumor volume is moderately large, which may support pCR. MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive features strongly predict outcome. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.""
+}",1623,306,113.15,1
+ISPY2-318569,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.554 (log-odds), i.e. \""against_pcr\"".""]",0.458,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.191, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0838, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The MammaPrint status is low-risk, which supports pCR, while HR positivity and elevated core15_kep are against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. The MRI shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the model predicts a 45.8% chance of pCR, indicating uncertainty. Consider close monitoring and response assessment during therapy.",1,0.458,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.191, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0838, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The MammaPrint status is low-risk, which is against pCR in the model, while HR positivity and elevated core15_kep are also against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. The MRI shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the model predicts a 45.8% chance of pCR, indicating uncertainty. Consider close monitoring and response assessment during therapy.","{
+  ""pcr_probability"": 0.458,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.191,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0838,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The MammaPrint status is low-risk, which is against pCR in the model, while HR positivity and elevated core15_kep are also against pCR. The safe_rim_Ktrans is moderately elevated, supporting pCR. The MRI shows a well-defined enhancing mass with heterogeneous enhancement. Overall, the model predicts a 45.8% chance of pCR, indicating uncertainty. Consider close monitoring and response assessment during therapy.""
+}",1636,322,14.06,1
+ISPY2-458196,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.453 (log-odds), i.e. \""against_pcr\"".""]",0.327,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.243, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4116, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4116 mm³, which supports pCR, but core15_kep (0.243) and HR positivity are against pCR. MammaPrint low risk supports pCR. The MRI shows a moderately enhancing lesion with a defined rim. Overall, the model predicts 32.7% pCR probability, indicating uncertainty.",1,0.327,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.243, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4116, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4116 mm³, which supports pCR, but core15_kep (0.243), HER2 negativity, and HR positivity are against pCR. MammaPrint low risk is also against pCR per model contribution. The MRI shows a moderately enhancing lesion with a defined rim. Overall, the model predicts 32.7% pCR probability, indicating uncertainty.","{
+  ""pcr_probability"": 0.327,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.243,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4116,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4116 mm³, which supports pCR, but core15_kep (0.243), HER2 negativity, and HR positivity are against pCR. MammaPrint low risk is also against pCR per model contribution. The MRI shows a moderately enhancing lesion with a defined rim. Overall, the model predicts 32.7% pCR probability, indicating uncertainty.""
+}",1631,328,43.2,1
+ISPY2-493472,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.648 (log-odds), i.e. \""against_pcr\"".""]",0.306,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0779, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a moderate tumor volume and a relatively large safe rim. The MammaPrint status is low-risk, which favors pCR, but HR positivity and HER2 negativity are unfavorable. The rim's low Ktrans and kep suggest less aggressive perfusion, which may support response. Overall, the model predicts a 30.6% chance of pCR, with conflicting factors; thus, the outcome remains uncertain.",1,0.306,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0779, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a moderate tumor volume and a relatively large safe rim. The MammaPrint status is low-risk, which in the model is associated with lower pCR probability. HR positivity and HER2 negativity are unfavorable. The rim's low Ktrans and kep suggest less aggressive perfusion, which may support response. Overall, the model predicts a 30.6% chance of pCR, with conflicting factors; thus, the outcome remains uncertain.","{
+  ""pcr_probability"": 0.306,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.0779,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has hormone receptor-positive, HER2-negative disease with a moderate tumor volume and a relatively large safe rim. The MammaPrint status is low-risk, which in the model is associated with lower pCR probability. HR positivity and HER2 negativity are unfavorable. The rim's low Ktrans and kep suggest less aggressive perfusion, which may support response. Overall, the model predicts a 30.6% chance of pCR, with conflicting factors; thus, the outcome remains uncertain.""
+}",1627,318,8.86,1
+ISPY2-507249,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.444 (log-odds), i.e. \""against_pcr\"".""]",0.434,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 37, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and HER2-positive, both favorable for pCR. MammaPrint low-risk also supports pCR. However, hormone receptor positivity and a relatively large rim-to-core volume ratio are less favorable. The tumor volume is moderate. Overall, the model prediction is neutral, and response is uncertain. Consider close monitoring during therapy.",1,0.434,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 37, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and HER2-positive, both favorable for pCR. However, hormone receptor positivity, a low-risk MammaPrint profile (which in this model is associated with lower pCR likelihood), and a relatively large rim-to-core volume ratio are less favorable. The tumor volume is moderate. Overall, the model prediction is neutral, and response is uncertain. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.434,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 37,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and HER2-positive, both favorable for pCR. However, hormone receptor positivity, a low-risk MammaPrint profile (which in this model is associated with lower pCR likelihood), and a relatively large rim-to-core volume ratio are less favorable. The tumor volume is moderate. Overall, the model prediction is neutral, and response is uncertain. Consider close monitoring during therapy.""
+}",1594,289,28.42,1
+ISPY2-483667,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.441 (log-odds), i.e. \""against_pcr\"".""]",0.551,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4171, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.066, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.173, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a moderate tumor volume. The core15 Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity and moderate tumor size support pCR. MammaPrint low-risk status also favors response. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive features of high response. Overall, the model predicts borderline pCR probability, and response remains uncertain.",1,0.551,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4171, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.066, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.173, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a moderate tumor volume. The core15 Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity and moderate tumor size support pCR. MammaPrint low-risk status, while generally favorable, is associated with lower pCR probability in this model. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive features of high response. Overall, the model predicts borderline pCR probability, and response remains uncertain.","{
+  ""pcr_probability"": 0.551,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4171,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.066,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.173,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a moderate tumor volume. The core15 Ktrans and kep values are relatively low, which may indicate less aggressive perfusion and lower likelihood of pCR. However, HER2 positivity and moderate tumor size support pCR. MammaPrint low-risk status, while generally favorable, is associated with lower pCR probability in this model. The MRI shows a well-defined enhancing mass with a rim pattern, but no definitive features of high response. Overall, the model predicts borderline pCR probability, and response remains uncertain.""
+}",1646,341,49.88,1
+ISPY2-539904,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.484 (log-odds), i.e. \""against_pcr\"".""]",0.415,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15403, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0656, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, but the large tumor size and high HR status are unfavorable. The core and rim perfusion parameters are modest, with the rim Ktrans being relatively low. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no clear necrosis or rapid washout. Overall, the model predicts a 41.5% chance of pCR, which is uncertain.",1,0.415,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15403, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0656, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, but the large tumor size and high HR status are unfavorable. The core and rim perfusion parameters are modest, with the rim Ktrans being relatively low. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no clear necrosis or rapid washout. Overall, the model predicts a 41.5% chance of pCR, which is uncertain.","{
+  ""pcr_probability"": 0.415,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 15403,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0656,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC disease with a large tumor volume. The MammaPrint status is low-risk, which favors pCR, but the large tumor size and high HR status are unfavorable. The core and rim perfusion parameters are modest, with the rim Ktrans being relatively low. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no clear necrosis or rapid washout. Overall, the model predicts a 41.5% chance of pCR, which is uncertain.""
+}",1645,325,18.66,1
+ISPY2-570685,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.515 (log-odds), i.e. \""against_pcr\"".""]",0.424,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 780, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.19, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0555, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 70, ""direction"": ""against_pcr""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, older age and lower rim Ktrans suggest reduced response likelihood. The MammaPrint low-risk status supports pCR, but overall prediction remains uncertain. Imaging shows a moderately enhancing lesion with a defined rim, consistent with mixed perfusion. Clinical and imaging features balance, leading to a neutral prediction.",1,0.424,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 780, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.19, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0555, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 70, ""direction"": ""against_pcr""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, older age and lower rim Ktrans suggest reduced response likelihood. The MammaPrint low-risk status is associated with lower pCR probability in the model. Imaging shows a moderately enhancing lesion with a defined rim, consistent with mixed perfusion. Clinical and imaging features balance, leading to a neutral prediction.","{
+  ""pcr_probability"": 0.424,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 780,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.19,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0555,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 70,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume and a rim-to-core volume ratio favoring pCR. However, older age and lower rim Ktrans suggest reduced response likelihood. The MammaPrint low-risk status is associated with lower pCR probability in the model. Imaging shows a moderately enhancing lesion with a defined rim, consistent with mixed perfusion. Clinical and imaging features balance, leading to a neutral prediction.""
+}",1638,323,55.05,1
+ISPY2-579881,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.296 (log-odds), i.e. \""against_pcr\"".""]",0.329,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 32, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0902, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a low-risk MammaPrint profile, both favoring pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_Ktrans is modest, and the rim-to-core volume ratio is elevated, which may reflect heterogeneous perfusion. Overall, the model predicts a 32.9% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.329,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 32, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0902, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a low-risk MammaPrint profile, both favoring pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_Ktrans is modest, and the rim-to-core volume ratio is elevated, which may reflect heterogeneous perfusion. Overall, the model predicts a 32.9% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.329,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 32,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0902,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and has a low-risk MammaPrint profile, both favoring pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_Ktrans is modest, and the rim-to-core volume ratio is elevated, which may reflect heterogeneous perfusion. Overall, the model predicts a 32.9% chance of pCR, suggesting uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1622,302,15.46,1
+ISPY2-578975,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.512 (log-odds), i.e. \""against_pcr\"".""]",0.354,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.139, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 10643, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and low MammaPrint risk, which are mixed predictors for pCR. The tumour shows moderate enhancement on MRI, with lower Ktrans and kep in the rim compared to the core, suggesting heterogeneous perfusion. The model predicts a 35% chance of pCR, but the evidence is conflicting. Consider close monitoring during neoadjuvant therapy.",1,0.354,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.139, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 10643, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and low MammaPrint risk, which are mixed predictors for pCR. The tumour shows moderate enhancement on MRI, with lower Ktrans and kep in the rim compared to the core, suggesting heterogeneous perfusion. The model predicts a 35% chance of pCR, but the evidence is conflicting. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.354,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.139,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 10643,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has triple-negative breast cancer with a large tumour volume and low MammaPrint risk, which are mixed predictors for pCR. The tumour shows moderate enhancement on MRI, with lower Ktrans and kep in the rim compared to the core, suggesting heterogeneous perfusion. The model predicts a 35% chance of pCR, but the evidence is conflicting. Consider close monitoring during neoadjuvant therapy.""
+}",1614,300,57.77,1
+ISPY2-624777,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.521 (log-odds), i.e. \""against_pcr\"".""]",0.559,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3941, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.0991, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, and has a MammaPrint low-risk profile, also favoring response. Tumor volume is moderately large, which slightly supports pCR. However, hormone receptor positivity and lower core15_kep suggest reduced likelihood of response. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging features strongly predict pCR. Overall, the model prediction is neutral, and response remains uncertain.",1,0.559,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3941, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.0991, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but has a MammaPrint low-risk profile, which is associated with lower pCR likelihood. Tumor volume is moderately large, which slightly supports pCR. However, hormone receptor positivity and lower core15_kep suggest reduced likelihood of response. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging features strongly predict pCR. Overall, the model prediction is neutral, and response remains uncertain.","{
+  ""pcr_probability"": 0.559,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3941,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.0991,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which supports pCR, but has a MammaPrint low-risk profile, which is associated with lower pCR likelihood. Tumor volume is moderately large, which slightly supports pCR. However, hormone receptor positivity and lower core15_kep suggest reduced likelihood of response. The MRI shows a heterogeneous enhancement pattern with a defined rim, but no definitive imaging features strongly predict pCR. Overall, the model prediction is neutral, and response remains uncertain.""
+}",1630,312,57.52,1
+ISPY2-609897,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.356 (log-odds), i.e. \""against_pcr\"".""]",0.372,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4615, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 47 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4615 mm³ with a rim-to-core volume ratio of 1.2, both features supporting pCR. However, HR and HER2 status are against pCR. The MRI shows a spiculated, enhancing lesion with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts 37.2% pCR probability, indicating uncertainty.",1,0.372,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4615, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 47 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4615 mm³ with a rim-to-core volume ratio of 1.2, both features supporting pCR. However, HR, HER2, and MammaPrint status are against pCR. The MRI shows a spiculated, enhancing lesion with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts 37.2% pCR probability, indicating uncertainty.","{
+  ""pcr_probability"": 0.372,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4615,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 47 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour volume is 4615 mm³ with a rim-to-core volume ratio of 1.2, both features supporting pCR. However, HR, HER2, and MammaPrint status are against pCR. The MRI shows a spiculated, enhancing lesion with a defined rim, but no specific imaging features strongly predict pCR. Overall, the model predicts 37.2% pCR probability, indicating uncertainty.""
+}",1648,334,17.19,1
+ISPY2-646233,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.512 (log-odds), i.e. \""against_pcr\"".""]",0.307,uncertain,"[{""feature"": ""core15_Ktrans"", ""value"": 0.0772, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1734, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.156, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability of pCR (0.307). The tumor is hormone receptor-positive and HER2-negative, which are less favorable for pCR. However, the tumor volume is moderately large, and the rim region shows relatively high kep, which may support response. The core Ktrans is low, which is unfavorable. MammaPrint status is low-risk, which is favorable. Overall, the evidence is mixed, and response remains uncertain.",1,0.307,uncertain,"[{""feature"": ""core15_Ktrans"", ""value"": 0.0772, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1734, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.156, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability of pCR (0.307). The tumor is hormone receptor-positive and HER2-negative, which are less favorable for pCR. However, the tumor volume is moderately large, and the rim region shows relatively high kep, which may support response. The core Ktrans is low, which is unfavorable. MammaPrint status is low-risk, but in the reference model, this feature contributes negatively to pCR probability. Overall, the evidence is mixed, and response remains uncertain.","{
+  ""pcr_probability"": 0.307,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.0772,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 1734,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.156,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has a moderate probability of pCR (0.307). The tumor is hormone receptor-positive and HER2-negative, which are less favorable for pCR. However, the tumor volume is moderately large, and the rim region shows relatively high kep, which may support response. The core Ktrans is low, which is unfavorable. MammaPrint status is low-risk, but in the reference model, this feature contributes negatively to pCR probability. Overall, the evidence is mixed, and response remains uncertain.""
+}",1629,327,34.24,1
+ISPY2-640043,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.491 (log-odds), i.e. \""against_pcr\"".""]",0.307,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.105, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2579, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a moderately sized tumor with a high core-to-rim volume ratio, which may support pCR. However, hormone receptor positivity, HER2 negativity, and low rim Ktrans suggest lower likelihood. MammaPrint low-risk status is favorable. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.",1,0.307,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.105, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2579, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a moderately sized tumor with a high core-to-rim volume ratio, which may support pCR. However, hormone receptor positivity, HER2 negativity, and low rim Ktrans suggest lower likelihood. MammaPrint low-risk status is favorable. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.307,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.105,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 2579,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and has a moderately sized tumor with a high core-to-rim volume ratio, which may support pCR. However, hormone receptor positivity, HER2 negativity, and low rim Ktrans suggest lower likelihood. MammaPrint low-risk status is favorable. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.""
+}",1604,290,64.03,1
+ISPY2-705381,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.417 (log-odds), i.e. \""against_pcr\"".""]",0.463,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.157, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.101, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 19210, ""direction"": ""against_pcr""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_Ktrans supports pCR, while MammaPrint low-risk and HER2 positivity are favorable. However, HR positivity and lower rim Ktrans are against pCR. The overall model prediction is 0.463, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.463,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.157, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.101, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 19210, ""direction"": ""against_pcr""}]","This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_Ktrans supports pCR, while HER2 positivity is favorable. However, HR positivity, low MammaPrint risk, and lower rim Ktrans are against pCR. The overall model prediction is 0.463, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.463,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.157,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.101,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 19210,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive disease with a moderate tumor volume. The core15_Ktrans supports pCR, while HER2 positivity is favorable. However, HR positivity, low MammaPrint risk, and lower rim Ktrans are against pCR. The overall model prediction is 0.463, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1622,306,31.62,1
+ISPY2-723918,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.512 (log-odds), i.e. \""against_pcr\"".""]",0.489,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 6482, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.176, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume. The MammaPrint status is low-risk, which supports pCR, while HR positivity and moderate core Ktrans/kep values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. The overall model prediction is borderline, suggesting uncertainty in pCR likelihood.",1,0.489,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 6482, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.176, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR likelihood in the model. HR positivity and moderate core Ktrans/kep values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. The overall model prediction is borderline, suggesting uncertainty in pCR likelihood.","{
+  ""pcr_probability"": 0.489,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 6482,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.176,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has HER2-positive, hormone receptor-positive, non-TNBC breast cancer with a moderate tumor volume. The MammaPrint status is low-risk, which is associated with lower pCR likelihood in the model. HR positivity and moderate core Ktrans/kep values are less favorable. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core. The overall model prediction is borderline, suggesting uncertainty in pCR likelihood.""
+}",1611,301,19.34,1
+ISPY2-703401,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.417 (log-odds), i.e. \""against_pcr\"".""]",0.338,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.245, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1375, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement on MRI with a volume of 1375 mm³. Core15_kep is high, which is associated with lower pCR likelihood, while MammaPrint low risk and larger tumour volume support pCR. Overall, the model predicts 33.8% pCR probability, indicating uncertainty. Consider clinical context and biopsy results for treatment planning.",1,0.338,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.245, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1375, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement on MRI with a volume of 1375 mm³. Core15_kep is high, which is associated with lower pCR likelihood, while larger tumour volume supports pCR. MammaPrint low risk, HR-positive, and HER2-negative status are all associated with lower pCR probability. Overall, the model predicts 33.8% pCR probability, indicating uncertainty. Consider clinical context and biopsy results for treatment planning.","{
+  ""pcr_probability"": 0.338,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.245,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 1375,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 46 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement on MRI with a volume of 1375 mm³. Core15_kep is high, which is associated with lower pCR likelihood, while larger tumour volume supports pCR. MammaPrint low risk, HR-positive, and HER2-negative status are all associated with lower pCR probability. Overall, the model predicts 33.8% pCR probability, indicating uncertainty. Consider clinical context and biopsy results for treatment planning.""
+}",1634,338,29.84,1
+ISPY2-742477,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.495 (log-odds), i.e. \""against_pcr\"".""]",0.535,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.143, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0836, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but hormone receptor-positive and core15_kep is high, which are against pCR. MammaPrint low-risk and rim kep are favorable. Tumor volume is moderate. The overall prediction is uncertain, with a balanced mix of supportive and opposing factors. Consider close monitoring during neoadjuvant therapy.",1,0.535,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.143, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0836, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but hormone receptor-positive and core15_kep is high, which are against pCR. MammaPrint low-risk is against pCR in the model, while rim kep is favorable. Tumor volume is moderate. The overall prediction is uncertain, with a balanced mix of supportive and opposing factors. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.535,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.143,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.0836,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which supports pCR, but hormone receptor-positive and core15_kep is high, which are against pCR. MammaPrint low-risk is against pCR in the model, while rim kep is favorable. Tumor volume is moderate. The overall prediction is uncertain, with a balanced mix of supportive and opposing factors. Consider close monitoring during neoadjuvant therapy.""
+}",1605,298,27.28,1
+ISPY2-729732,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.634 (log-odds), i.e. \""against_pcr\"".""]",0.303,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3505, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.28, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a moderately large tumor with a high-risk MammaPrint profile, which may favor pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_kep value is modest and not strongly predictive. The tumor shows heterogeneous enhancement on MRI, with a defined rim, but no definitive imaging features strongly predict response. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.",1,0.303,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3505, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.28, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a moderately large tumor with a high-risk MammaPrint profile, which may favor pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_kep value is modest and not strongly predictive. The tumor shows heterogeneous enhancement on MRI, with a defined rim, but no definitive imaging features strongly predict response. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.","{
+  ""pcr_probability"": 0.303,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3505,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.28,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and has a moderately large tumor with a high-risk MammaPrint profile, which may favor pCR. However, hormone receptor positivity and HER2 negativity are associated with lower pCR likelihood. The core15_kep value is modest and not strongly predictive. The tumor shows heterogeneous enhancement on MRI, with a defined rim, but no definitive imaging features strongly predict response. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.""
+}",1624,310,42.85,1
+ISPY2-759418,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.495 (log-odds), i.e. \""against_pcr\"".""]",0.353,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.0437, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.118, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0329, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a large volume and a rim-to-core volume ratio of 1.2. Core and rim kinetic parameters suggest mixed perfusion and washout characteristics. The model predicts a 35% chance of pCR, with MammaPrint and rim kinetics supporting pCR, while HER2 status and core kep are against it. Overall, the response is uncertain.",1,0.353,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.0437, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.118, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0329, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 42 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a large volume and a rim-to-core volume ratio of 1.2. Core and rim kinetic parameters suggest mixed perfusion and washout characteristics. The model predicts a 35% chance of pCR, with rim kinetics supporting pCR, while HER2 status, core kep, and MammaPrint are against it. Overall, the response is uncertain.","{
+  ""pcr_probability"": 0.353,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.0437,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.118,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.0329,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 42 years old with hormone receptor-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a large volume and a rim-to-core volume ratio of 1.2. Core and rim kinetic parameters suggest mixed perfusion and washout characteristics. The model predicts a 35% chance of pCR, with rim kinetics supporting pCR, while HER2 status, core kep, and MammaPrint are against it. Overall, the response is uncertain.""
+}",1647,333,74.31,1
+ISPY2-745633,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.560 (log-odds), i.e. \""against_pcr\"".""]",0.302,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.104, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 56 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a rim-to-core volume ratio of 1.2, which supports pCR, but low safe_rim_kep and high HR/HER2 negativity are against pCR. The model predicts 30.2% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.302,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.104, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 56 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a rim-to-core volume ratio of 1.2, which supports pCR, but low safe_rim_kep and high HR/HER2 negativity are against pCR. The model predicts 30.2% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.302,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.104,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 56 years old with HR-positive, HER2-negative, non-TNBC disease and MammaPrint low risk. The tumour shows moderate enhancement with a rim-to-core volume ratio of 1.2, which supports pCR, but low safe_rim_kep and high HR/HER2 negativity are against pCR. The model predicts 30.2% pCR probability, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1633,313,68.37,1
+ISPY2-759015,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.449 (log-odds), i.e. \""against_pcr\""."", ""Evidence item \""HER2\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.309 (log-odds), i.e. \""against_pcr\"".""]",0.327,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.205, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4643, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 36, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a large tumor volume, both supportive of pCR. However, the core15_kep is high, which is associated with lower pCR likelihood. MammaPrint and HER2-negative status also reduce pCR probability. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core, but no definitive imaging features strongly predict response. Overall, the model predicts moderate pCR probability, and the case remains uncertain.",1,0.327,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.205, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4643, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 36, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a large tumor volume, both supportive of pCR. However, the core15_kep is high, which is associated with lower pCR likelihood. MammaPrint and HER2-negative status also reduce pCR probability. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core, but no definitive imaging features strongly predict response. Overall, the model predicts moderate pCR probability, and the case remains uncertain.","{
+  ""pcr_probability"": 0.327,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.205,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4643,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 36,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and has a large tumor volume, both supportive of pCR. However, the core15_kep is high, which is associated with lower pCR likelihood. MammaPrint and HER2-negative status also reduce pCR probability. The tumor shows heterogeneous enhancement on MRI, with a defined rim and core, but no definitive imaging features strongly predict response. Overall, the model predicts moderate pCR probability, and the case remains uncertain.""
+}",1659,306,67.57,1
+ISPY2-794428,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.590 (log-odds), i.e. \""against_pcr\"".""]",0.349,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0842, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16382, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.112, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement in the core and rim. The MammaPrint low-risk status and hormone receptor negativity support pCR, while large tumour size and lower rim Ktrans/kep values are less favorable. The model predicts a 34.9% chance of pCR, which is uncertain. Consider close monitoring during neoadjuvant therapy.",1,0.349,uncertain,"[{""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.0842, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16382, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.112, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement in the core and rim. The hormone receptor negativity supports pCR, while large tumour size, low MammaPrint risk (which is against pCR in the model), and lower core Ktrans values are less favorable. The model predicts a 34.9% chance of pCR, which is uncertain. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.349,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.0842,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 16382,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.112,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has triple-negative breast cancer with a large tumour volume and moderate enhancement in the core and rim. The hormone receptor negativity supports pCR, while large tumour size, low MammaPrint risk (which is against pCR in the model), and lower core Ktrans values are less favorable. The model predicts a 34.9% chance of pCR, which is uncertain. Consider close monitoring during neoadjuvant therapy.""
+}",1625,313,9.99,1
+ISPY2-782334,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.648 (log-odds), i.e. \""against_pcr\"".""]",0.343,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3043, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability of pCR (0.343). The tumor is hormone receptor-positive and HER2-negative, which are associated with lower pCR likelihood. However, the tumor volume is relatively large, and the rim-to-core volume ratio is favorable, both supporting pCR. MammaPrint status is low-risk, which also favors response. The MRI shows a well-defined enhancing mass with a prominent rim, but no features strongly predict response. Overall, the evidence is mixed, and response remains uncertain.",1,0.343,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3043, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate probability of pCR (0.343). The tumor is hormone receptor-positive and HER2-negative, which are associated with lower pCR likelihood. However, the tumor volume is relatively large, and the rim-to-core volume ratio is favorable, both supporting pCR. MammaPrint status is low-risk, which also favors response. The MRI shows a well-defined enhancing mass with a prominent rim, but no features strongly predict response. Overall, the evidence is mixed, and response remains uncertain.","{
+  ""pcr_probability"": 0.343,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3043,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has a moderate probability of pCR (0.343). The tumor is hormone receptor-positive and HER2-negative, which are associated with lower pCR likelihood. However, the tumor volume is relatively large, and the rim-to-core volume ratio is favorable, both supporting pCR. MammaPrint status is low-risk, which also favors response. The MRI shows a well-defined enhancing mass with a prominent rim, but no features strongly predict response. Overall, the evidence is mixed, and response remains uncertain.""
+}",1640,321,69.48,1
+ISPY2-789497,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.502 (log-odds), i.e. \""against_pcr\"".""]",0.328,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2820, ""direction"": ""supports_pcr""}, {""feature"": ""core15_volume_mm3"", ""value"": 424, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a hormone receptor-positive, HER2-negative tumor with intermediate volume and MammaPrint low-risk status. The tumor shows moderate enhancement on MRI, with a relatively large core volume. While tumor size and core volume support pCR, HR positivity and HER2 negativity are against it. MammaPrint low-risk is favorable. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.",1,0.328,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2820, ""direction"": ""supports_pcr""}, {""feature"": ""core15_volume_mm3"", ""value"": 424, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a hormone receptor-positive, HER2-negative tumor with intermediate volume and MammaPrint low-risk status. The tumor shows moderate enhancement on MRI, with a relatively large core volume. While tumor size and core volume support pCR, HR positivity and HER2 negativity are against it. MammaPrint low-risk is favorable. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.","{
+  ""pcr_probability"": 0.328,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 2820,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_volume_mm3"",
+      ""value"": 424,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has a hormone receptor-positive, HER2-negative tumor with intermediate volume and MammaPrint low-risk status. The tumor shows moderate enhancement on MRI, with a relatively large core volume. While tumor size and core volume support pCR, HR positivity and HER2 negativity are against it. MammaPrint low-risk is favorable. Overall, the probability of pCR is borderline, and response should be monitored closely during therapy.""
+}",1613,298,57.76,1
+ISPY2-797427,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.523 (log-odds), i.e. \""against_pcr\"".""]",0.371,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0618, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1479, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive and has a lower-risk MammaPrint profile, both favoring pCR. However, the tumor is hormone receptor-positive and shows low Ktrans in the safe rim, which are less favorable. Tumor volume is moderately large, supporting pCR. The overall prediction is uncertain, with no strong evidence for or against pCR. Consider close monitoring during neoadjuvant therapy.",1,0.371,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_Ktrans"", ""value"": 0.0618, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1479, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which favors pCR. However, MammaPrint low-risk status, hormone receptor positivity, and low Ktrans in the safe rim are less favorable. Tumor volume is moderately large, supporting pCR. The overall prediction is uncertain, with no strong evidence for or against pCR. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.371,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_Ktrans"",
+      ""value"": 0.0618,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 1479,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which favors pCR. However, MammaPrint low-risk status, hormone receptor positivity, and low Ktrans in the safe rim are less favorable. Tumor volume is moderately large, supporting pCR. The overall prediction is uncertain, with no strong evidence for or against pCR. Consider close monitoring during neoadjuvant therapy.""
+}",1618,289,58.83,1
+ISPY2-828199,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.495 (log-odds), i.e. \""against_pcr\"".""]",0.38,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.323, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 43, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 43 years old with HR-positive, HER2-negative disease and a low-risk MammaPrint profile. The tumour shows moderate enhancement on MRI with a core15_kep value supporting pCR. However, HR positivity and HER2 negativity are associated with lower pCR likelihood. The overall model prediction is 0.38, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.",1,0.38,uncertain,"[{""feature"": ""core15_kep"", ""value"": 0.323, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 43, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is 43 years old with HR-positive, HER2-negative disease and a low-risk MammaPrint profile. The tumour shows moderate enhancement on MRI with a core15_kep value supporting pCR. However, HR positivity, HER2 negativity, and MammaPrint low-risk status are associated with lower pCR likelihood. The overall model prediction is 0.38, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.","{
+  ""pcr_probability"": 0.38,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.323,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""age"",
+      ""value"": 43,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is 43 years old with HR-positive, HER2-negative disease and a low-risk MammaPrint profile. The tumour shows moderate enhancement on MRI with a core15_kep value supporting pCR. However, HR positivity, HER2 negativity, and MammaPrint low-risk status are associated with lower pCR likelihood. The overall model prediction is 0.38, indicating uncertainty. Consider close monitoring during neoadjuvant therapy.""
+}",1609,300,51.4,1
+ISPY2-845663,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.459 (log-odds), i.e. \""against_pcr\"".""]",0.337,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.121, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4169, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a large tumor volume with a prominent rim, which may support pCR. However, the tumor is hormone receptor-positive and HER2-negative, and the MammaPrint risk is low, which are associated with lower pCR likelihood. The rim's low kep suggests less aggressive perfusion, which may reduce response probability. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.",1,0.337,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.121, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4169, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is young and has a large tumor volume with a prominent rim, which may support pCR. However, the tumor is hormone receptor-positive and HER2-negative, and the MammaPrint risk is low, which are associated with lower pCR likelihood. The rim's low kep suggests less aggressive perfusion, which may reduce response probability. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.","{
+  ""pcr_probability"": 0.337,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.121,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4169,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is young and has a large tumor volume with a prominent rim, which may support pCR. However, the tumor is hormone receptor-positive and HER2-negative, and the MammaPrint risk is low, which are associated with lower pCR likelihood. The rim's low kep suggests less aggressive perfusion, which may reduce response probability. Overall, the model predicts moderate pCR probability, but the evidence is mixed. Consider close monitoring during therapy.""
+}",1631,315,16.92,1
+ISPY2-847753,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.533 (log-odds), i.e. \""against_pcr\"".""]",0.339,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3525, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a higher-risk MammaPrint profile. The tumour shows moderate enhancement with a relatively large rim volume compared to the core, which may support response. However, the absence of HER2 positivity and presence of HR positivity are associated with lower pCR likelihood. The overall prediction is uncertain, with a moderate probability of pCR.",1,0.339,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""safe_rim_to_core15_volume_ratio"", ""value"": 1.2, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 3525, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has hormone receptor-positive, HER2-negative disease with a higher-risk MammaPrint profile. The tumour shows moderate enhancement with a relatively large rim volume compared to the core, which may support response. However, the absence of HER2 positivity and presence of HR positivity are associated with lower pCR likelihood. The overall prediction is uncertain, with a moderate probability of pCR.","{
+  ""pcr_probability"": 0.339,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_to_core15_volume_ratio"",
+      ""value"": 1.2,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 3525,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has hormone receptor-positive, HER2-negative disease with a higher-risk MammaPrint profile. The tumour shows moderate enhancement with a relatively large rim volume compared to the core, which may support response. However, the absence of HER2 positivity and presence of HR positivity are associated with lower pCR likelihood. The overall prediction is uncertain, with a moderate probability of pCR.""
+}",1608,293,31.08,1
+ISPY2-885590,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.452 (log-odds), i.e. \""against_pcr\"".""]",0.361,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5908, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.27, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate pCR probability (0.361) based on pretreatment features. The tumor is large and hormone receptor-positive, which are associated with lower pCR likelihood. However, the MammaPrint risk is low, which supports pCR. The core15_kep is moderately elevated, which may indicate less aggressive biology. The MRI shows a well-defined enhancing lesion with a rim pattern, but no specific imaging feature strongly predicts pCR. Overall, response is uncertain.",1,0.361,uncertain,"[{""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5908, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.27, ""direction"": ""against_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a moderate pCR probability (0.361) based on pretreatment features. The tumor is large and hormone receptor-positive, which are associated with lower pCR likelihood. The MammaPrint risk is low, but in the reference model, this is associated with lower pCR probability. The core15_kep is moderately elevated, which may indicate less aggressive biology. The MRI shows a well-defined enhancing lesion with a rim pattern, but no specific imaging feature strongly predicts pCR. Overall, response is uncertain.","{
+  ""pcr_probability"": 0.361,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 5908,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.27,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This patient has a moderate pCR probability (0.361) based on pretreatment features. The tumor is large and hormone receptor-positive, which are associated with lower pCR likelihood. The MammaPrint risk is low, but in the reference model, this is associated with lower pCR probability. The core15_kep is moderately elevated, which may indicate less aggressive biology. The MRI shows a well-defined enhancing lesion with a rim pattern, but no specific imaging feature strongly predicts pCR. Overall, response is uncertain.""
+}",1625,321,37.29,1
+ISPY2-981461,development,M3,"[""Evidence item \""MammaPrint\"" is marked \""supports_pcr\"", but its contribution in the reference model is -0.344 (log-odds), i.e. \""against_pcr\"".""]",0.557,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.154, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4927, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.14, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but has a relatively low core15_kep and safe_rim_kep, which are against pCR. Tumor volume is moderately large, supporting pCR, while MammaPrint is low-risk, also supporting pCR. The overall model prediction is 0.557, indicating uncertainty. The MRI shows a well-defined enhancing lesion with a rim pattern, but no features strongly predict pCR. Clinical and imaging factors are mixed; close monitoring during therapy is advised.",1,0.557,uncertain,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_kep"", ""value"": 0.154, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4927, ""direction"": ""supports_pcr""}, {""feature"": ""safe_rim_kep"", ""value"": 0.14, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HER2-positive, which supports pCR, but has a relatively low core15_kep and safe_rim_kep, which are against pCR. Tumor volume is moderately large, supporting pCR, while MammaPrint is low-risk, which is against pCR in the model. The overall model prediction is 0.557, indicating uncertainty. The MRI shows a well-defined enhancing lesion with a rim pattern, but no features strongly predict pCR. Clinical and imaging factors are mixed; close monitoring during therapy is advised.","{
+  ""pcr_probability"": 0.557,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_kep"",
+      ""value"": 0.154,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 4927,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""safe_rim_kep"",
+      ""value"": 0.14,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HER2-positive, which supports pCR, but has a relatively low core15_kep and safe_rim_kep, which are against pCR. Tumor volume is moderately large, supporting pCR, while MammaPrint is low-risk, which is against pCR in the model. The overall model prediction is 0.557, indicating uncertainty. The MRI shows a well-defined enhancing lesion with a rim pattern, but no features strongly predict pCR. Clinical and imaging factors are mixed; close monitoring during therapy is advised.""
+}",1640,334,25.98,1

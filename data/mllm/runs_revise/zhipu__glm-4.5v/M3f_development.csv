@@ -1,0 +1,541 @@
+pid,split,config,violations,orig_probability,orig_conclusion,orig_evidence,orig_report,parse_ok,probability,conclusion,evidence,report,raw_text,prompt_tokens,completion_tokens,latency_s,cached
+ACRIN-6698-474874,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 80%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.65,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 59274, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient has a high estimated probability of achieving pCR (approximately 65%). The primary driver is the HER2-positive, HR-negative tumor biology, which is highly sensitive to neoadjuvant therapy, particularly when combined with HER2-targeted agents. However, the large tumor volume (59274 mm³) and the extensive, heterogeneous enhancement pattern visible on MRI are adverse factors that lower this probability from the >80% typically seen in smaller HER2+ cancers. While a pCR is likely, the significant disease burden warrants close monitoring.",1,0.65,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 59274, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient has a high estimated probability of achieving pCR (approximately 0.65). The primary driver is the HER2-positive, HR-negative tumor biology, which is highly sensitive to neoadjuvant therapy, particularly when combined with HER2-targeted agents. However, the large tumor volume (59274 mm³) and the extensive, heterogeneous enhancement pattern visible on MRI are adverse factors that lower this probability from the typical expectation for smaller HER2+ cancers. While a pCR is likely, the significant disease burden warrants close monitoring.","```json
+{
+  ""pcr_probability"": 0.65,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 59274,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""This patient has a high estimated probability of achieving pCR (approximately 0.65). The primary driver is the HER2-positive, HR-negative tumor biology, which is highly sensitive to neoadjuvant therapy, particularly when combined with HER2-targeted agents. However, the large tumor volume (59274 mm³) and the extensive, heterogeneous enhancement pattern visible on MRI are adverse factors that lower this probability from the typical expectation for smaller HER2+ cancers. While a pCR is likely, the significant disease burden warrants close monitoring.""
+}
+```",1535,264,5.31,1
+ACRIN-6698-343898,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 50. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.35,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 55652, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.173, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient has triple-negative breast cancer (TNBC), a subtype with relatively high pCR rates after neoadjuvant therapy. However, the tumor is large (volume > 50 cm³) and shows heterogeneous enhancement on MRI, which are adverse features for achieving pCR. The moderate Ktrans value suggests some vascularity but is not strongly predictive. Overall, the probability of pCR is estimated at approximately 35%, reflecting the competing effects of favorable biology and unfavorable size/texture.",1,0.35,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 55652, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.173, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This patient has triple-negative breast cancer (TNBC), a subtype with relatively high pCR rates after neoadjuvant therapy. However, the tumor is large (volume of 55652 mm³) and shows heterogeneous enhancement on MRI, which are adverse features for achieving pCR. The Ktrans value of 0.173 suggests moderate vascularity but is not strongly predictive. Overall, the probability of pCR is estimated at approximately 35%, reflecting the competing effects of favorable biology and unfavorable size/texture.","```json
+{
+  ""pcr_probability"": 0.35,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 55652, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.173, ""direction"": ""supports_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This patient has triple-negative breast cancer (TNBC), a subtype with relatively high pCR rates after neoadjuvant therapy. However, the tumor is large (volume of 55652 mm³) and shows heterogeneous enhancement on MRI, which are adverse features for achieving pCR. The Ktrans value of 0.173 suggests moderate vascularity but is not strongly predictive. Overall, the probability of pCR is estimated at approximately 35%, reflecting the competing effects of favorable biology and unfavorable size/texture.""
+}
+```",1505,240,24.99,1
+ACRIN-6698-522140,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.087, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5360, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HR-positive and HER2-negative, which are the primary factors associated with a lower probability of achieving pathologic complete response (pCR) to neoadjuvant therapy, typically estimated at <20% in this subtype. The tumor demonstrates moderate enhancement kinetics and a volume of 5360 mm3. Based on these pretreatment characteristics, pCR is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.087, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5360, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is HR-positive and HER2-negative, which are the primary factors associated with a lower probability of achieving pathologic complete response (pCR) to neoadjuvant therapy. The tumor demonstrates moderate enhancement kinetics and a volume of 5360 mm3. Based on these pretreatment characteristics, pCR is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.087,
+      ""direction"": ""neutral""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 5360,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is HR-positive and HER2-negative, which are the primary factors associated with a lower probability of achieving pathologic complete response (pCR) to neoadjuvant therapy. The tumor demonstrates moderate enhancement kinetics and a volume of 5360 mm3. Based on these pretreatment characteristics, pCR is unlikely.""
+}
+```",1531,250,5.66,1
+ACRIN-6698-408692,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 50, 60%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 25, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2929, ""direction"": ""neutral""}]","This young patient with triple-negative breast cancer has a baseline probability of achieving pCR around 50-60%. The tumor shows moderate enhancement and a volume of approximately 2930 mm³. While the TNBC subtype and young age are favorable predictors for treatment response, the high-risk MammaPrint category introduces some uncertainty regarding the likelihood of a complete pathologic response.",1,0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 25, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 2929, ""direction"": ""neutral""}]","This young patient with triple-negative breast cancer has a moderate probability of achieving pCR. The tumor shows moderate enhancement and a volume of 2929 mm³. While the TNBC subtype and young age are favorable predictors for treatment response, the high-risk MammaPrint category introduces some uncertainty regarding the likelihood of a complete pathologic response.","```json
+{
+  ""pcr_probability"": 0.55,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""age"", ""value"": 25, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 2929, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This young patient with triple-negative breast cancer has a moderate probability of achieving pCR. The tumor shows moderate enhancement and a volume of 2929 mm³. While the TNBC subtype and young age are favorable predictors for treatment response, the high-risk MammaPrint category introduces some uncertainty regarding the likelihood of a complete pathologic response.""
+}
+```",1481,199,5.26,1
+ACRIN-6698-688955,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 60. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 6013, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is unlikely to achieve a pathologic complete response (pCR) to neoadjuvant therapy (estimated probability ~15%). This assessment is primarily driven by the HR-positive/HER2-negative biology and the high-risk MammaPrint category, which are both associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. Additionally, the large tumor volume (~60 cm³) and the presence of heterogeneous enhancement with irregular margins on MRI further suggest a lower likelihood of complete eradication.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 6013, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is unlikely to achieve a pathologic complete response (pCR) to neoadjuvant therapy (estimated probability ~15%). This assessment is primarily driven by the HR-positive/HER2-negative biology and the high-risk MammaPrint category, which are both associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. Additionally, the large tumor volume and the presence of heterogeneous enhancement with irregular margins on MRI further suggest a lower likelihood of complete eradication.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 6013, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is unlikely to achieve a pathologic complete response (pCR) to neoadjuvant therapy (estimated probability ~15%). This assessment is primarily driven by the HR-positive/HER2-negative biology and the high-risk MammaPrint category, which are both associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. Additionally, the large tumor volume and the presence of heterogeneous enhancement with irregular margins on MRI further suggest a lower likelihood of complete eradication.""
+}
+```",1529,251,4.87,1
+ACRIN-6698-748583,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 10, 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.12,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0859, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 67-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of pathologic complete response (pCR) to neoadjuvant chemotherapy, typically ranging from 10-20%. The tumor volume is moderate at 5344 mm3 with heterogeneous enhancement and relatively low perfusion parameters (core15_Ktrans 0.0859). Given the absence of high-risk features such as triple-negative or HER2-positive status, a pCR is unlikely.",1,0.12,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0859, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 67-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of pathologic complete response (pCR) to neoadjuvant chemotherapy. The tumor volume is moderate at 5344 mm3 with heterogeneous enhancement and relatively low perfusion parameters (core15_Ktrans 0.0859). Given the absence of high-risk features such as triple-negative or HER2-positive status, a pCR is unlikely.","```json
+{
+  ""pcr_probability"": 0.12,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0859, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 67-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of pathologic complete response (pCR) to neoadjuvant chemotherapy. The tumor volume is moderate at 5344 mm3 with heterogeneous enhancement and relatively low perfusion parameters (core15_Ktrans 0.0859). Given the absence of high-risk features such as triple-negative or HER2-positive status, a pCR is unlikely.""
+}
+```",1531,247,4.6,1
+ACRIN-6698-530095,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.179, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 45-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The MRI shows a large, heterogeneously enhancing mass with a volume of 6307 mm3. While the core Ktrans of 0.179 suggests moderate vascularity, which can be favorable for drug delivery, the tumor's size and biology are dominant negative prognostic factors for achieving a complete pathologic response to neoadjuvant therapy.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.179, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 45-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The MRI shows a large, heterogeneously enhancing mass with a volume of 6307 mm3. While the core Ktrans of 0.179 suggests moderate vascularity, which can be favorable for drug delivery, the tumor's size and biology are dominant negative prognostic factors for achieving a complete pathologic response to neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.179,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""The patient is a 45-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The MRI shows a large, heterogeneously enhancing mass with a volume of 6307 mm3. While the core Ktrans of 0.179 suggests moderate vascularity, which can be favorable for drug delivery, the tumor's size and biology are dominant negative prognostic factors for achieving a complete pathologic response to neoadjuvant therapy.""
+}
+```",1527,254,5.41,1
+ACRIN-6698-879224,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 40, 50%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.45,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16644, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.218, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This young patient with triple-negative breast cancer has a baseline probability of pCR around 40-50%. However, the large tumor volume (16,644 mm³) and heterogeneous enhancement pattern on MRI are adverse features that lower this estimate to approximately 45%. The moderate Ktrans values suggest intermediate vascularity. While TNBC is generally chemosensitive, the substantial tumor burden and imaging characteristics introduce uncertainty regarding achieving a complete pathologic response.",1,0.45,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 16644, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.218, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","This young patient with triple-negative breast cancer has a favorable biology for pCR. However, the large tumor volume of 16,644 mm³ and heterogeneous enhancement pattern on MRI are adverse features that lower the estimated probability to approximately 0.45. The moderate Ktrans value of 0.218 suggests intermediate vascularity. While TNBC is generally chemosensitive, the substantial tumor burden and imaging characteristics introduce uncertainty regarding achieving a complete pathologic response.","```json
+{
+  ""pcr_probability"": 0.45,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 16644, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.218, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This young patient with triple-negative breast cancer has a favorable biology for pCR. However, the large tumor volume of 16,644 mm³ and heterogeneous enhancement pattern on MRI are adverse features that lower the estimated probability to approximately 0.45. The moderate Ktrans value of 0.218 suggests intermediate vascularity. While TNBC is generally chemosensitive, the substantial tumor burden and imaging characteristics introduce uncertainty regarding achieving a complete pathologic response.""
+}
+```",1497,225,9.33,1
+ISPY2-153327,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 55, 60%, 65%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.62,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7708, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of pathologic complete response (pCR) to neoadjuvant chemotherapy, with expected pCR rates of 55-65% in this subtype. The tumor shows rapid and heterogeneous enhancement on MRI with a volume of 7708 mm3; while larger tumor size can modestly lower pCR probability, the favorable biology remains dominant. The quantitative MRI parameters show moderate perfusion values consistent with a typical TNBC phenotype. Overall, there is a reasonably high likelihood (>60%) that this patient will achieve pCR after completing neoadjuvant therapy.",1,0.62,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7708, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of pathologic complete response (pCR) to neoadjuvant chemotherapy. The tumor shows rapid and heterogeneous enhancement on MRI with a volume of 7708 mm³; while larger tumor size can modestly lower pCR probability, the favorable biology remains dominant. The quantitative MRI parameters show moderate perfusion values consistent with a typical TNBC phenotype. Overall, there is a reasonably high likelihood that this patient will achieve pCR after completing neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.62,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 7708, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of pathologic complete response (pCR) to neoadjuvant chemotherapy. The tumor shows rapid and heterogeneous enhancement on MRI with a volume of 7708 mm³; while larger tumor size can modestly lower pCR probability, the favorable biology remains dominant. The quantitative MRI parameters show moderate perfusion values consistent with a typical TNBC phenotype. Overall, there is a reasonably high likelihood that this patient will achieve pCR after completing neoadjuvant therapy.""
+}
+```",1556,259,3.95,1
+ISPY2-411806,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.193, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15200, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 45-year-old with HR-positive/HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The tumor volume of 15200 mm³ is large, which further reduces the likelihood of achieving pCR. MRI shows an enhancing mass with heterogeneous internal enhancement and irregular margins. Pharmacokinetic parameters (core Ktrans 0.193) are within average ranges for this subtype. Based on the combination of unfavorable biology and substantial tumor burden, pCR after neoadjuvant therapy is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.193, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15200, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 45-year-old with HR-positive/HER2-negative breast cancer, a subtype associated with low pCR rates. The tumor volume of 15200 mm³ is large, which further reduces the likelihood of achieving pCR. MRI shows an enhancing mass with heterogeneous internal enhancement and irregular margins. Pharmacokinetic parameters (core Ktrans 0.193) are within average ranges for this subtype. Based on the combination of unfavorable biology and substantial tumor burden, pCR after neoadjuvant therapy is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.193, ""direction"": ""neutral""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 15200, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is a 45-year-old with HR-positive/HER2-negative breast cancer, a subtype associated with low pCR rates. The tumor volume of 15200 mm³ is large, which further reduces the likelihood of achieving pCR. MRI shows an enhancing mass with heterogeneous internal enhancement and irregular margins. Pharmacokinetic parameters (core Ktrans 0.193) are within average ranges for this subtype. Based on the combination of unfavorable biology and substantial tumor burden, pCR after neoadjuvant therapy is unlikely.""
+}
+```",1536,262,4.11,1
+ISPY2-289107,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 60%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.62,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.119, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1970, ""direction"": ""against_pcr""}]","This patient has a moderately high probability of achieving pCR (approx. 60%). The triple-negative subtype and high-risk MammaPrint status are strong predictors of chemosensitivity and favorable response to neoadjuvant therapy. MRI features support this: the tumor shows rapid, intense enhancement with a high core Ktrans (0.119), indicating high vascular permeability often seen in aggressive but treatment-responsive tumors. The tumor volume of 1970 mm3 is a moderate negative factor, as larger tumors are slightly less likely to achieve complete pathologic clearance.",1,0.62,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.119, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 1970, ""direction"": ""against_pcr""}]","This patient has a moderately high probability of achieving pCR. The triple-negative subtype and high-risk MammaPrint status are strong predictors of chemosensitivity and favorable response to neoadjuvant therapy. MRI features support this: the tumor shows rapid, intense enhancement with a high core Ktrans of 0.119, indicating high vascular permeability often seen in aggressive but treatment-responsive tumors. The tumor volume of 1970 mm3 is a moderate negative factor, as larger tumors are slightly less likely to achieve complete pathologic clearance.","```json
+{
+  ""pcr_probability"": 0.62,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.119, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 1970, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This patient has a moderately high probability of achieving pCR. The triple-negative subtype and high-risk MammaPrint status are strong predictors of chemosensitivity and favorable response to neoadjuvant therapy. MRI features support this: the tumor shows rapid, intense enhancement with a high core Ktrans of 0.119, indicating high vascular permeability often seen in aggressive but treatment-responsive tumors. The tumor volume of 1970 mm3 is a moderate negative factor, as larger tumors are slightly less likely to achieve complete pathologic clearance.""
+}
+```",1523,247,3.57,1
+ISPY2-188091,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 60, 70%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.75,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.14, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5346, ""direction"": ""neutral""}]","The patient is a 50-year-old with HER2-positive, hormone receptor-negative breast cancer, a subtype with high sensitivity to neoadjuvant therapy and pCR rates often exceeding 60-70%. The MRI shows a mass with rapid, intense enhancement and relatively circumscribed margins, which are favorable imaging features for treatment response. While the tumor volume is moderate at 5346 mm3, the strong predictive value of the HER2+/HR- status suggests a high likelihood of achieving pathologic complete response.",1,0.75,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.14, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5346, ""direction"": ""neutral""}]","The patient is a 50-year-old with HER2-positive, hormone receptor-negative breast cancer, a subtype with high sensitivity to neoadjuvant therapy and a strong likelihood of pathologic complete response. The MRI shows a mass with rapid, intense enhancement and relatively circumscribed margins, which are favorable imaging features for treatment response. While the tumor volume is moderate at 5346 mm3, the strong predictive value of the HER2+/HR- status suggests this patient has a high probability of achieving pCR.","```json
+{
+  ""pcr_probability"": 0.75,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HER2"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""HR"",
+      ""value"": 0,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.14,
+      ""direction"": ""neutral""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 5346,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is a 50-year-old with HER2-positive, hormone receptor-negative breast cancer, a subtype with high sensitivity to neoadjuvant therapy and a strong likelihood of pathologic complete response. The MRI shows a mass with rapid, intense enhancement and relatively circumscribed margins, which are favorable imaging features for treatment response. While the tumor volume is moderate at 5346 mm3, the strong predictive value of the HER2+/HR- status suggests this patient has a high probability of achieving pCR.""
+}
+```",1563,287,4.93,1
+ISPY2-510543,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.1, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 62-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint category (1). This clinical profile is associated with a low probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy, typically estimated at approximately 10-20%. The tumor demonstrates moderate enhancement kinetics with a core15_Ktrans of 0.1 and a volume of 8217 mm3. Given the strong predictive value of the hormone receptor status in this context, pCR is considered unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.1, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 62-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint category (1). This clinical profile is associated with a low probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The tumor demonstrates moderate enhancement kinetics with a core15_Ktrans of 0.1 and a volume of 8217 mm3. Given the strong predictive value of the hormone receptor status in this context, pCR is considered unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.1, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 62-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint category (1). This clinical profile is associated with a low probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The tumor demonstrates moderate enhancement kinetics with a core15_Ktrans of 0.1 and a volume of 8217 mm3. Given the strong predictive value of the hormone receptor status in this context, pCR is considered unlikely.""
+}
+```",1532,252,4.88,1
+ISPY2-500826,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 10%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.05,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.13, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 69-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy (typically <10%). The tumor volume is 8335 mm3 and the imaging shows an enhancing mass with central necrosis. The quantitative MRI parameters (Ktrans and kep values) are within typical ranges for this presentation but do not indicate the high vascular permeability often seen in highly chemosensitive subtypes like triple-negative or HER2-positive disease. Overall, pCR is unlikely.",1,0.05,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.13, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 69-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The tumor volume is 8335 mm3 and the imaging shows an enhancing mass with central necrosis. The quantitative MRI parameters (Ktrans and kep values) are within typical ranges for this presentation but do not indicate the high vascular permeability often seen in highly chemosensitive subtypes like triple-negative or HER2-positive disease. Overall, pCR is unlikely.","```json
+{
+  ""pcr_probability"": 0.05,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.13, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 69-year-old with HR-positive/HER2-negative breast cancer. This subtype has a low baseline probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The tumor volume is 8335 mm3 and the imaging shows an enhancing mass with central necrosis. The quantitative MRI parameters (Ktrans and kep values) are within typical ranges for this presentation but do not indicate the high vascular permeability often seen in highly chemosensitive subtypes like triple-negative or HER2-positive disease. Overall, pCR is unlikely.""
+}
+```",1539,265,3.68,1
+ISPY2-554577,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 37637, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.125, ""direction"": ""neutral""}]","The patient is a 52-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The tumor burden is substantial with a volume of 37637 mm3 and shows heterogeneous enhancement on MRI, which are negative prognostic factors for achieving pCR. While the Ktrans values are not exceptionally high, the combination of biology and size suggests that a complete pathologic response to neoadjuvant therapy is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 37637, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.125, ""direction"": ""neutral""}]","The patient is a 52-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The tumor burden is substantial with a volume of 37637 mm3 and shows heterogeneous enhancement on MRI, which are negative prognostic factors for achieving pCR. While the Ktrans values are not exceptionally high, the combination of biology and size suggests that a complete pathologic response to neoadjuvant therapy is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 37637,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.125,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""The patient is a 52-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The tumor burden is substantial with a volume of 37637 mm3 and shows heterogeneous enhancement on MRI, which are negative prognostic factors for achieving pCR. While the Ktrans values are not exceptionally high, the combination of biology and size suggests that a complete pathologic response to neoadjuvant therapy is unlikely.""
+}
+```",1554,278,4.83,1
+ISPY2-604199,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.167, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13585, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is HR-positive/HER2-negative with a large tumor volume (13585 mm³). This subtype and size are associated with lower pCR rates (typically <20%). MRI shows heterogeneous enhancement without the rapid wash-in/wash-out pattern typical of highly chemosensitive tumors. Pharmacokinetic parameters are in a moderate range. Overall, pCR is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.167, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 13585, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is HR-positive/HER2-negative with a large tumor volume (13585 mm³). This subtype and size are associated with lower pCR rates. MRI shows heterogeneous enhancement without the rapid wash-in/wash-out pattern typical of highly chemosensitive tumors. Pharmacokinetic parameters are in a moderate range. Overall, pCR is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.167, ""direction"": ""neutral""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 13585, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is HR-positive/HER2-negative with a large tumor volume (13585 mm³). This subtype and size are associated with lower pCR rates. MRI shows heterogeneous enhancement without the rapid wash-in/wash-out pattern typical of highly chemosensitive tumors. Pharmacokinetic parameters are in a moderate range. Overall, pCR is unlikely.""
+}
+```",1499,224,28.31,1
+ISPY2-586091,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.18,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.151, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a low estimated probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy (approximately 15-20%). The primary factors driving this estimate are the hormone receptor-positive/HER2-negative biology and the high-risk MammaPrint category, both of which are historically associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. The tumor's kinetic parameters and volume are within ranges that do not significantly alter this baseline clinical probability.",1,0.18,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.151, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has a low estimated probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The primary factors driving this estimate are the hormone receptor-positive/HER2-negative biology and the high-risk MammaPrint category, both of which are historically associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. The tumor's kinetic parameters and volume are within ranges that do not significantly alter this baseline clinical probability.","```json
+{
+  ""pcr_probability"": 0.18,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.151, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This patient has a low estimated probability of achieving a pathologic complete response (pCR) to neoadjuvant therapy. The primary factors driving this estimate are the hormone receptor-positive/HER2-negative biology and the high-risk MammaPrint category, both of which are historically associated with lower pCR rates compared to HER2-positive or triple-negative subtypes. The tumor's kinetic parameters and volume are within ranges that do not significantly alter this baseline clinical probability.""
+}
+```",1517,241,3.22,1
+ISPY2-553141,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 10%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.08,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0905, ""direction"": ""against_pcr""}]","The patient is a 70-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint result. This subtype is historically associated with low pCR rates (typically <10%) following neoadjuvant chemotherapy. The MRI shows a solid mass of approximately 3165 mm3 with relatively low perfusion parameters (core15_Ktrans 0.0905), which further suggests a lower likelihood of achieving a complete pathologic response compared to more aggressive subtypes like triple-negative or HER2-positive disease.",1,0.08,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.0905, ""direction"": ""against_pcr""}]","The patient is a 70-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint result. This subtype is historically associated with low pCR rates following neoadjuvant chemotherapy. The MRI shows a solid mass of approximately 3165 mm3 with relatively low perfusion parameters (core15_Ktrans 0.0905), which further suggests a lower likelihood of achieving a complete pathologic response compared to more aggressive subtypes like triple-negative or HER2-positive disease.","```json
+{
+  ""pcr_probability"": 0.08,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.0905, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""The patient is a 70-year-old with HR-positive/HER2-negative breast cancer and a high-risk MammaPrint result. This subtype is historically associated with low pCR rates following neoadjuvant chemotherapy. The MRI shows a solid mass of approximately 3165 mm3 with relatively low perfusion parameters (core15_Ktrans 0.0905), which further suggests a lower likelihood of achieving a complete pathologic response compared to more aggressive subtypes like triple-negative or HER2-positive disease.""
+}
+```",1515,237,5.63,1
+ISPY2-597253,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.118, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 59-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, which are features often associated with lower treatment sensitivity. Quantitative analysis reveals low vascular permeability (core15_Ktrans of 0.118) and slow contrast washout (core15_kep of 0.15), suggesting a less aggressive tumor biology that may be resistant to neoadjuvant therapy. Given the luminal-like subtype and these imaging characteristics, achieving a pathologic complete response is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.118, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}]","The patient is a 59-year-old with HR-positive, HER2-negative breast cancer, a subtype associated with lower pCR rates. The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, features often linked to reduced treatment sensitivity. Quantitative analysis reveals low vascular permeability (core15_Ktrans of 0.118) and slow contrast washout (core15_kep of 0.15), suggesting a less aggressive tumor biology that may be resistant to neoadjuvant therapy. Given the luminal-like subtype and these imaging characteristics, achieving a pathologic complete response is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""core15_Ktrans"",
+      ""value"": 0.118,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    }
+  ],
+  ""report"": ""The patient is a 59-year-old with HR-positive, HER2-negative breast cancer, a subtype associated with lower pCR rates. The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, features often linked to reduced treatment sensitivity. Quantitative analysis reveals low vascular permeability (core15_Ktrans of 0.118) and slow contrast washout (core15_kep of 0.15), suggesting a less aggressive tumor biology that may be resistant to neoadjuvant therapy. Given the luminal-like subtype and these imaging characteristics, achieving a pathologic complete response is unlikely.""
+}
+```",1551,276,5.23,1
+ISPY2-778020,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15736, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}]","The patient is a 54-year-old with HR-positive, HER2-negative breast cancer, a subtype historically associated with lower pCR rates (typically <20%). The tumor is large (volume 15736 mm3) and shows heterogeneous enhancement on MRI with a central necrotic area, which are features often linked to residual disease. While the high-risk MammaPrint result indicates aggressive biology that may respond to chemotherapy, the overall clinical and imaging profile suggests a low probability of achieving a pathologic complete response.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 15736, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""supports_pcr""}]","The patient is a 54-year-old with HR-positive, HER2-negative breast cancer, a subtype historically associated with lower pCR rates. The tumor is large (volume 15736 mm3) and shows heterogeneous enhancement on MRI with a central necrotic area, which are features often linked to residual disease. While the high-risk MammaPrint result indicates aggressive biology that may respond to chemotherapy, the overall clinical and imaging profile suggests a low probability of achieving a pathologic complete response.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {
+      ""feature"": ""HR"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""HER2"",
+      ""value"": 0,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 15736,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    }
+  ],
+  ""report"": ""The patient is a 54-year-old with HR-positive, HER2-negative breast cancer, a subtype historically associated with lower pCR rates. The tumor is large (volume 15736 mm3) and shows heterogeneous enhancement on MRI with a central necrotic area, which are features often linked to residual disease. While the high-risk MammaPrint result indicates aggressive biology that may respond to chemotherapy, the overall clinical and imaging profile suggests a low probability of achieving a pathologic complete response.""
+}
+```",1556,281,4.16,1
+ISPY2-690410,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 10%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.08,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 40030, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 69, ""direction"": ""neutral""}]","The patient is a 69-year-old with HR-positive, HER2-negative breast cancer, a subtype with a low baseline pCR rate (typically <10%). The tumor is large (volume 40030 mm3) and shows heterogeneous enhancement on MRI with irregular margins. These clinical and imaging features collectively indicate a very low probability of achieving pathologic complete response to neoadjuvant therapy.",1,0.08,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 40030, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""age"", ""value"": 69, ""direction"": ""neutral""}]","The patient is a 69-year-old with HR-positive, HER2-negative breast cancer, a subtype with low baseline pCR rates. The tumor is large (volume 40030 mm3) and shows heterogeneous enhancement on MRI with irregular margins. These clinical and imaging features collectively indicate a very low probability of achieving pathologic complete response to neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.08,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 40030, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""},
+    {""feature"": ""age"", ""value"": 69, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 69-year-old with HR-positive, HER2-negative breast cancer, a subtype with low baseline pCR rates. The tumor is large (volume 40030 mm3) and shows heterogeneous enhancement on MRI with irregular margins. These clinical and imaging features collectively indicate a very low probability of achieving pathologic complete response to neoadjuvant therapy.""
+}
+```",1499,222,4.05,1
+ISPY2-692885,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 60%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.65,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5569, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of a pathologic complete response (pCR) to neoadjuvant therapy. The tumor shows rapid and intense enhancement on MRI with high Ktrans values, consistent with the aggressive biology of TNBC. While the relatively large tumor volume (5569 mm³) is a negative prognostic factor for achieving pCR, the favorable subtype is expected to dominate the clinical outcome. Overall, there is a high probability (>60%) that this patient will achieve pCR.",1,0.65,likely_pcr,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5569, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of a pathologic complete response (pCR) to neoadjuvant therapy. The tumor shows rapid and intense enhancement on MRI with high Ktrans values, consistent with the aggressive biology of TNBC. While the relatively large tumor volume (5569 mm³) is a negative prognostic factor for achieving pCR, the favorable subtype is expected to dominate the clinical outcome. Overall, there is a high probability that this patient will achieve pCR.","```json
+{
+  ""pcr_probability"": 0.65,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 0, ""direction"": ""supports_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""neutral""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 5569, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This patient has triple-negative breast cancer (TNBC), which is the strongest predictor of a pathologic complete response (pCR) to neoadjuvant therapy. The tumor shows rapid and intense enhancement on MRI with high Ktrans values, consistent with the aggressive biology of TNBC. While the relatively large tumor volume (5569 mm³) is a negative prognostic factor for achieving pCR, the favorable subtype is expected to dominate the clinical outcome. Overall, there is a high probability that this patient will achieve pCR.""
+}
+```",1529,257,4.2,1
+ISPY2-742477,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 60, 70%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.75,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4984, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient is a 44-year-old with HR+/HER2+ breast cancer. HER2 positivity is the strongest predictor of pCR in this case, significantly increasing the likelihood of a complete response to neoadjuvant therapy (often exceeding 60-70% in modern regimens). While hormone receptor positivity and a moderate tumor volume of 4984 mm3 are factors that typically lower pCR rates compared to triple-negative disease, the dominant effect of HER2 status prevails. The MRI shows an enhancing mass with heterogeneous uptake. Based on these pretreatment characteristics, the estimated probability of achieving a pathologic complete response is high.",1,0.75,likely_pcr,"[{""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 4984, ""direction"": ""neutral""}, {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}]","The patient is a 44-year-old with HR+/HER2+ breast cancer. HER2 positivity is the strongest predictor of pCR in this case, significantly increasing the likelihood of a complete response to neoadjuvant therapy. While hormone receptor positivity and a moderate tumor volume of 4984 mm3 are factors that typically lower pCR rates compared to triple-negative disease, the dominant effect of HER2 status prevails. The MRI shows an enhancing mass with heterogeneous uptake. Based on these pretreatment characteristics, the estimated probability of achieving a pathologic complete response is high.","```json
+{
+  ""pcr_probability"": 0.75,
+  ""conclusion"": ""likely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HER2"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 4984, ""direction"": ""neutral""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""supports_pcr""}
+  ],
+  ""report"": ""The patient is a 44-year-old with HR+/HER2+ breast cancer. HER2 positivity is the strongest predictor of pCR in this case, significantly increasing the likelihood of a complete response to neoadjuvant therapy. While hormone receptor positivity and a moderate tumor volume of 4984 mm3 are factors that typically lower pCR rates compared to triple-negative disease, the dominant effect of HER2 status prevails. The MRI shows an enhancing mass with heterogeneous uptake. Based on these pretreatment characteristics, the estimated probability of achieving a pathologic complete response is high.""
+}
+```",1532,245,3.47,1
+ISPY2-791321,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 50, 60%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 31, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 27546, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""neutral""}]","This young patient with triple-negative breast cancer has a baseline probability of achieving pCR around 50-60%. However, the large tumor volume (27,546 mm³) and heterogeneous enhancement pattern on MRI are adverse features that lower this estimate to approximately 55%. While TNBC is generally chemosensitive, the substantial tumor burden and high-risk genomic profile introduce significant uncertainty regarding a complete pathologic response.",1,0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 31, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 27546, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""neutral""}]","This young patient with triple-negative breast cancer has a moderate probability of achieving pCR estimated at 0.55. The TNBC subtype and young age are favorable predictors. However, the large tumor volume of 27546 mm³ and heterogeneous enhancement pattern on MRI are adverse features that lower this estimate and introduce significant uncertainty regarding a complete pathologic response.","```json
+{
+  ""pcr_probability"": 0.55,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""age"", ""value"": 31, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 27546, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""neutral""}
+  ],
+  ""report"": ""This young patient with triple-negative breast cancer has a moderate probability of achieving pCR estimated at 0.55. The TNBC subtype and young age are favorable predictors. However, the large tumor volume of 27546 mm³ and heterogeneous enhancement pattern on MRI are adverse features that lower this estimate and introduce significant uncertainty regarding a complete pathologic response.""
+}
+```",1509,222,4.01,1
+ISPY2-800710,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 50, 60%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 29, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 12797, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}]","This young patient with triple-negative breast cancer has a baseline probability of achieving pCR around 50-60%. However, the large tumor volume (12797 mm3) and high-risk MammaPrint status are adverse prognostic factors that lower this estimate. The MRI shows a large mass with heterogeneous enhancement and an irregular rim, which is typical for aggressive biology but also suggests a substantial disease burden that may be resistant to complete eradication. Overall, pCR is possible but not certain.",1,0.55,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""age"", ""value"": 29, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 12797, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}]","This young patient with triple-negative breast cancer has favorable biology for pCR. However, the large tumor volume of 12797 mm3 and high-risk MammaPrint status are adverse factors that lower the probability. The MRI shows a large mass with heterogeneous enhancement and an irregular rim, suggesting aggressive disease with substantial burden that may resist complete eradication. Overall, pCR is possible but uncertain.","```json
+{
+  ""pcr_probability"": 0.55,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""},
+    {""feature"": ""age"", ""value"": 29, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 12797, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""against_pcr""},
+    {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}
+  ],
+  ""report"": ""This young patient with triple-negative breast cancer has favorable biology for pCR. However, the large tumor volume of 12797 mm3 and high-risk MammaPrint status are adverse factors that lower the probability. The MRI shows a large mass with heterogeneous enhancement and an irregular rim, suggesting aggressive disease with substantial burden that may resist complete eradication. Overall, pCR is possible but uncertain.""
+}
+```",1524,230,3.86,1
+ISPY2-873686,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7754, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 60-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The tumor volume of 7754 mm3 indicates a large tumor burden, which further reduces the likelihood of achieving pCR. The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, consistent with the clinical profile. Given these factors, pCR is unlikely.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 7754, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 60-year-old with HR-positive, HER2-negative breast cancer, a subtype associated with lower pCR rates compared to HER2-positive or triple-negative disease. The tumor volume of 7754 mm3 indicates a large tumor burden, which further reduces the likelihood of achieving pCR. The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, consistent with the clinical profile. Given these factors, pCR is unlikely.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""TNBC"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 7754, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 60-year-old with HR-positive, HER2-negative breast cancer, a subtype associated with lower pCR rates compared to HER2-positive or triple-negative disease. The tumor volume of 7754 mm3 indicates a large tumor burden, which further reduces the likelihood of achieving pCR. The MRI shows an irregular mass with heterogeneous enhancement and spiculated margins, consistent with the clinical profile. Given these factors, pCR is unlikely.""
+}
+```",1510,243,3.78,1
+ISPY2-934906,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 40, 45%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.42,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 71286, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This young patient has triple-negative breast cancer, a subtype with relatively high pCR rates after neoadjuvant chemotherapy. However, the tumor is large (volume >70,000 mm³) and classified as high-risk by MammaPrint, both of which are associated with a lower likelihood of achieving pCR. The MRI shows a large mass with heterogeneous enhancement. Given these conflicting factors, the estimated probability of pathologic complete response is moderate (~40-45%).",1,0.42,uncertain,"[{""feature"": ""TNBC"", ""value"": 1, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 71286, ""direction"": ""against_pcr""}, {""feature"": ""MammaPrint"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","This young patient has triple-negative breast cancer, a subtype with relatively high pCR rates after neoadjuvant chemotherapy. However, the tumor is large (volume >70,000 mm³) and classified as high-risk by MammaPrint, both of which are associated with a lower likelihood of achieving pCR. The MRI shows a large mass with heterogeneous enhancement. Given these conflicting factors, the estimated probability of pathologic complete response is moderate.","```json
+{
+  ""pcr_probability"": 0.42,
+  ""conclusion"": ""uncertain"",
+  ""evidence"": [
+    {
+      ""feature"": ""TNBC"",
+      ""value"": 1,
+      ""direction"": ""supports_pcr""
+    },
+    {
+      ""feature"": ""tumor_volume_mm3"",
+      ""value"": 71286,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""MammaPrint"",
+      ""value"": 1,
+      ""direction"": ""against_pcr""
+    },
+    {
+      ""feature"": ""image"",
+      ""value"": null,
+      ""direction"": ""neutral""
+    }
+  ],
+  ""report"": ""This young patient has triple-negative breast cancer, a subtype with relatively high pCR rates after neoadjuvant chemotherapy. However, the tumor is large (volume >70,000 mm³) and classified as high-risk by MammaPrint, both of which are associated with a lower likelihood of achieving pCR. The MRI shows a large mass with heterogeneous enhancement. Given these conflicting factors, the estimated probability of pathologic complete response is moderate.""
+}
+```",1522,243,5.13,1
+ISPY2-885590,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.118, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5908, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 47-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The tumor shows moderate enhancement kinetics and a substantial volume of 5908 mm3. These clinical and imaging features collectively suggest a low probability of achieving pathologic complete response to neoadjuvant therapy.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.118, ""direction"": ""against_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 5908, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 47-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The tumor shows moderate enhancement kinetics and a substantial volume of 5908 mm3. These clinical and imaging features collectively suggest a low probability of achieving pathologic complete response to neoadjuvant therapy.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.118, ""direction"": ""against_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 5908, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 47-year-old with HR-positive, HER2-negative breast cancer, a subtype with historically low pCR rates. The tumor shows moderate enhancement kinetics and a substantial volume of 5908 mm3. These clinical and imaging features collectively suggest a low probability of achieving pathologic complete response to neoadjuvant therapy.""
+}
+```",1497,223,6.17,1
+ISPY2-990443,development,M3f,"[""The report contains number(s) that do not appear in the information provided: 20%. Do not state numbers that were not provided (no population statistics, ranges or estimates other than your own probability).""]",0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.144, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 9240, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 53-year-old with HR-positive/HER2-negative breast cancer, a subtype with historically low pCR rates (typically <20%). The tumor volume of 9240 mm3 indicates a large lesion, which further reduces the likelihood of pCR. While the core Ktrans value of 0.144 suggests moderate vascularity and some chemosensitivity, it does not outweigh the negative prognostic impact of the biology and size. The MRI shows an irregular mass with heterogeneous enhancement. Overall, the probability of achieving a pathologic complete response is estimated to be low.",1,0.15,unlikely_pcr,"[{""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""}, {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""}, {""feature"": ""core15_Ktrans"", ""value"": 0.144, ""direction"": ""supports_pcr""}, {""feature"": ""tumor_volume_mm3"", ""value"": 9240, ""direction"": ""against_pcr""}, {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}]","The patient is a 53-year-old with HR-positive/HER2-negative breast cancer, a subtype with low pCR rates. The tumor volume of 9240 mm3 indicates a large lesion, which further reduces the likelihood of pCR. While the core Ktrans value of 0.144 suggests moderate vascularity and some chemosensitivity, it does not outweigh the negative prognostic impact of the biology and size. The MRI shows an irregular mass with heterogeneous enhancement. Overall, the probability of achieving a pathologic complete response is estimated to be low.","```json
+{
+  ""pcr_probability"": 0.15,
+  ""conclusion"": ""unlikely_pcr"",
+  ""evidence"": [
+    {""feature"": ""HR"", ""value"": 1, ""direction"": ""against_pcr""},
+    {""feature"": ""HER2"", ""value"": 0, ""direction"": ""against_pcr""},
+    {""feature"": ""core15_Ktrans"", ""value"": 0.144, ""direction"": ""supports_pcr""},
+    {""feature"": ""tumor_volume_mm3"", ""value"": 9240, ""direction"": ""against_pcr""},
+    {""feature"": ""image"", ""value"": null, ""direction"": ""neutral""}
+  ],
+  ""report"": ""The patient is a 53-year-old with HR-positive/HER2-negative breast cancer, a subtype with low pCR rates. The tumor volume of 9240 mm3 indicates a large lesion, which further reduces the likelihood of pCR. While the core Ktrans value of 0.144 suggests moderate vascularity and some chemosensitivity, it does not outweigh the negative prognostic impact of the biology and size. The MRI shows an irregular mass with heterogeneous enhancement. Overall, the probability of achieving a pathologic complete response is estimated to be low.""
+}
+```",1547,270,3.78,1

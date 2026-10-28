@@ -44,10 +44,15 @@ $PY "$REPO/scripts/16_plot_workflow.py" "$OUT/mllm/cases.jsonl" "$OUT/mllm/image
 $PY "$REPO/scripts/17_extra_analyses.py" --mllm_dir "$OUT/mllm" --b1_dir "$OUT/b1" --roi_dir "$R" --out_dir "$PAPER" \
     --providers mock
 $PY "$REPO/scripts/18_b1_sensitivity.py" --b1_dir "$OUT/b1" --runs "No class weighting=$OUT/sens/spw1" --out_dir "$PAPER"
+$PY "$REPO/scripts/20_agreement_analysis.py" --mllm_dir "$OUT/mllm" --out_dir "$PAPER" --providers mock
+$PY "$REPO/scripts/21_counterfactual.py" --mllm_dir "$OUT/mllm" --provider mock --model mock-vl --workers 2
+$PY "$REPO/scripts/22_verify_revise.py" --mllm_dir "$OUT/mllm" --provider mock --model mock-vl --workers 2
+$PY "$REPO/scripts/23_evaluate_followups.py" --mllm_dir "$OUT/mllm" --out_dir "$PAPER"
 
 for f in tables/table_cv_rows.tex tables/table_prediction_rows.tex tables/table_faithfulness_rows.tex results_macros.tex \
          figures/fig_results.pdf figures/fig1_workflow.pdf figures/fig_calib_dca.pdf figures/fig_shap_citation.pdf \
-         tables/table_subtype_rows.tex tables/table_b1_sensitivity_rows.tex; do
+         tables/table_subtype_rows.tex tables/table_b1_sensitivity_rows.tex tables/table_agreement_rows.tex \
+         tables/table_cf_rows.tex tables/table_revise_rows.tex; do
   test -s "$PAPER/$f" || { echo "MISSING $f"; exit 1; }
 done
 echo "MLLM PIPELINE TEST PASSED ($PAPER)"

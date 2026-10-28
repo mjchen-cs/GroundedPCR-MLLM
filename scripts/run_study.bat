@@ -3,7 +3,7 @@ REM ============================================================================
 REM  Reproduce the I-SPY2 MLLM study end to end (Windows cmd / PowerShell via "cmd /c").
 REM
 REM    scripts\run_study.bat <stage>
-REM    stages: features | b1 | export | pilot | query | evaluate | all   (see README)
+REM    stages: features | b1 | export | pilot | query | followup | evaluate | all   (see README)
 REM
 REM  1) Edit the four paths below (no trailing backslash).
 REM  2) API keys come from environment variables only. In PowerShell:
@@ -39,6 +39,7 @@ if "%STAGE%"=="b1" goto b1
 if "%STAGE%"=="export" goto export
 if "%STAGE%"=="pilot" goto pilot
 if "%STAGE%"=="query" goto query
+if "%STAGE%"=="followup" goto followup
 if "%STAGE%"=="evaluate" goto evaluate
 if "%STAGE%"=="all" goto features
 echo unknown stage %STAGE% & exit /b 2
@@ -90,6 +91,13 @@ for %%S in (development heldout_test) do (
 )
 if not "%STAGE%"=="all" exit /b 0
 
+:followup
+python scripts\21_counterfactual.py --mllm_dir "%M%" --provider zhipu --model %ZHIPU_MODEL% --disable_thinking --workers %WORKERS% || exit /b 1
+python scripts\21_counterfactual.py --mllm_dir "%M%" --provider siliconflow --model %SF_MODEL% --workers %WORKERS% || exit /b 1
+python scripts\22_verify_revise.py --mllm_dir "%M%" --provider zhipu --model %ZHIPU_MODEL% --disable_thinking --workers %WORKERS% || exit /b 1
+python scripts\22_verify_revise.py --mllm_dir "%M%" --provider siliconflow --model %SF_MODEL% --workers %WORKERS% || exit /b 1
+if not "%STAGE%"=="all" exit /b 0
+
 :evaluate
 set /p BEST=<"%OUT_DIR%\cv\best_preset.txt"
 python scripts\14_evaluate_mllm.py --mllm_dir "%M%" --paper_dir "%PAPER_DIR%" --b1_preset %BEST% || exit /b 1
@@ -100,5 +108,10 @@ python scripts\17_extra_analyses.py --mllm_dir "%M%" --b1_dir "%OUT_DIR%\b1" --r
 set REPRO=
 if exist "%OUT_DIR%\sens\repro\xgboost_predictions.csv" set REPRO="Re-run of B1 in a second environment=%OUT_DIR%\sens\repro"
 python scripts\18_b1_sensitivity.py --b1_dir "%OUT_DIR%\b1" --out_dir "%PAPER_DIR%" --runs "XGBoost without class weighting=%OUT_DIR%\sens\spw1" "XGBoost, tree depth 3=%OUT_DIR%\sens\depth3" "XGBoost + treatment arm (24 inputs)=%OUT_DIR%\sens\arm" %REPRO% || exit /b 1
+python scripts\20_agreement_analysis.py --mllm_dir "%M%" --out_dir "%PAPER_DIR%" || exit /b 1
+set FU=0
+if exist "%M%\runs_cf" set FU=1
+if exist "%M%\runs_revise" set FU=1
+if "%FU%"=="1" python scripts\23_evaluate_followups.py --mllm_dir "%M%" --out_dir "%PAPER_DIR%" || exit /b 1
 echo Done. Tables, macros and figures are in %PAPER_DIR%
 endlocal

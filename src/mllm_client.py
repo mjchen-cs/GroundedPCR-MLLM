@@ -145,7 +145,14 @@ class MLLMClient:
         # atomic write: identical prompts (e.g. same clinical profile in M1) may be answered concurrently
         tmp = path.with_suffix(f".{os.getpid()}.{threading.get_ident()}.tmp")
         tmp.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
-        os.replace(tmp, path)
+        try:
+            os.replace(tmp, path)
+        except PermissionError:
+            # Windows: the target is being written/read by a concurrent identical request;
+            # its content is equivalent, so keep that file and drop ours.
+            if not path.exists():
+                raise
+            tmp.unlink(missing_ok=True)
         return res
 
     def _post(self, messages: list[dict[str, Any]]) -> tuple[str, dict[str, Any], dict[str, Any]]:

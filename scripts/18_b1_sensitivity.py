@@ -105,6 +105,9 @@ def main():
 
     for spec in a.runs:
         label, d = spec.split("=", 1)
+        if not (Path(d) / "xgboost_predictions.csv").exists():
+            print(f"[skip] {label}: {d} not found (run the b1 stage to create it)", flush=True)
+            continue
         r = pd.read_csv(Path(d) / "xgboost_predictions.csv")
         r = r[r.split_group == "development_oof"]
         mj = json.loads((Path(d) / "xgboost_metrics.json").read_text())
