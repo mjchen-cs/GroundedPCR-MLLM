@@ -11,7 +11,7 @@ The repository contains everything needed to go from the public BreastDCEDL I-SP
 2. a prespecified prompt ladder (**M1, M2, M3f, M3, M4**) that queries commercially hosted multimodal LLMs (GLM-4.5V on Zhipu AI, Qwen3-VL-32B-Instruct on SiliconFlow) through OpenAI-compatible APIs, with every reply cached on disk;
 3. an automatic **faithfulness audit** of the replies (numbers that are not in the prompt, evidence directions that contradict the SHAP sign, anchoring on the reference model, stability) plus discrimination, calibration, fusion and secondary analyses.
 
-> **Chinese step-by-step guide:** [`docs/README_zh.md`](docs/README_zh.md)
+
 >
 > **The study data are included.** [`data/`](data/README.md) contains everything derived from the images that the paper uses — the ROI curves, B1 inputs, predictions and SHAP values, and all 19,640 MLLM replies — so the paper can be reproduced without downloading 54 GB of images or paying for API calls:
 >
