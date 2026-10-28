@@ -1,0 +1,12 @@
+numpy>=1.24
+pandas>=2.0
+nibabel>=5.0
+scipy>=1.10
+matplotlib>=3.7
+scikit-learn>=1.2
+xgboost>=2.0
+torch>=2.0
+torchvision>=0.15   # only for scripts/08_extract_visual_embeddings.py
+# optional: shap (prettier beeswarm in scripts/07_shap_analysis.py; values are computed without it)
+requests>=2.28
+Pillow>=9.0

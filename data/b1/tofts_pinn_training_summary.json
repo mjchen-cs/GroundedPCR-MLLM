@@ -1,0 +1,82 @@
+{
+  "train_record_count": 1568,
+  "train_patient_count": 784,
+  "train_split_record_count": 1332,
+  "val_split_record_count": 236,
+  "curve_scale": 0.3348155323916486,
+  "best_monitored_loss": 0.00037579643321805634,
+  "epochs_trained": 250,
+  "pinn_architecture": "shared_region_mlp(curve+mask+region_flag)->[Ktrans,kep]",
+  "pinn_loss_definition": "total_loss = masked_recon_mse(Ct_hat, Ct) + lambda_reg * weak_parameter_range_regularizer",
+  "pinn_hyperparameters": {
+    "hidden_dim": 32,
+    "epochs_max": 250,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "early_stopping_patience": 25,
+    "val_fraction": 0.15,
+    "gradient_clip": 5.0,
+    "lambda_reg": 0.0001,
+    "soft_upper_ktrans": 2.0,
+    "soft_upper_kep": 5.0
+  },
+  "training_history_tail": [
+    {
+      "epoch": 241,
+      "train_loss": 0.0003099834572085889,
+      "monitored_loss": 0.00038145004873513244
+    },
+    {
+      "epoch": 242,
+      "train_loss": 0.0003055366950797006,
+      "monitored_loss": 0.0003780592742259614
+    },
+    {
+      "epoch": 243,
+      "train_loss": 0.00030753728718818386,
+      "monitored_loss": 0.00037944663199596107
+    },
+    {
+      "epoch": 244,
+      "train_loss": 0.00030663834019963233,
+      "monitored_loss": 0.00037986804090905935
+    },
+    {
+      "epoch": 245,
+      "train_loss": 0.00030632335221439247,
+      "monitored_loss": 0.00037924804564681835
+    },
+    {
+      "epoch": 246,
+      "train_loss": 0.00030703367554538305,
+      "monitored_loss": 0.00037815608811797574
+    },
+    {
+      "epoch": 247,
+      "train_loss": 0.0003059694700780147,
+      "monitored_loss": 0.0003823938786808867
+    },
+    {
+      "epoch": 248,
+      "train_loss": 0.0003060523719925966,
+      "monitored_loss": 0.0003819877019850537
+    },
+    {
+      "epoch": 249,
+      "train_loss": 0.0003067941392406023,
+      "monitored_loss": 0.0003779105591092957
+    },
+    {
+      "epoch": 250,
+      "train_loss": 0.00030795072962064296,
+      "monitored_loss": 0.00037579643321805634
+    }
+  ],
+  "device_used": "cpu",
+  "pinn_feature_generation_mode": "final_full_development_refit_only",
+  "whether_test_seen_in_pinn_training": false,
+  "development_pid_count": 784,
+  "heldout_test_pid_count": 198,
+  "random_state": 42
+}
