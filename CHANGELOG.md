@@ -14,7 +14,7 @@
 - `tests/test_mllm_pipeline.sh`: offline end-to-end test with the mock model.
 - Documentation:
   - `README.md` with full reproduction steps;
-  - `docs/README_zh.md`;
+  - `docs/REPRODUCTION_GUIDE.md` (step-by-step guide);
   - `docs/paper_to_code_map.md` for the MLLM manuscript; the documentation of the original manuscript moved to `docs/legacy/`.
 - `CITATION.cff` and `.env.example`; `.gitignore` excludes data, results and API caches.
 
